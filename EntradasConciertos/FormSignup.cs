@@ -53,7 +53,7 @@ namespace EntradasConciertos
                 labelUserAlrExists.Visible = false;
                 labelPwDontMatch.Visible = true;
             }
-            else if (userExists(campoUsuario.Text))
+            else if (ExisteUsuario(campoUsuario.Text))
             {
                 labelEmptyFields.Visible = false;
                 labelPwDontMatch.Visible = false;

@@ -17,6 +17,11 @@ namespace EntradasConciertos
             InitializeComponent();
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 

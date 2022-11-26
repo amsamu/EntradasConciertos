@@ -25,19 +25,21 @@ namespace EntradasConciertos
         }
 
         private void botonEntrar_Click(object sender, EventArgs e)
-        {
-            leerListaUsuarios();
-            //ArrayList credenciales = new ArrayList();
-            //credenciales.Add(new Usuario("Rickard", "northremembers", true));
-            //credenciales.Add(new Usuario("","",false));
-            int posUsuario = findUser(campoUsuario.Text);
-            if (posUsuario != -1)
+        {	
+			Usuario u = EncontrarUsuario(campoUsuario.Text);
+            if (u == null)
             {
-                Usuario u = (Usuario)listaUsuarios[posUsuario];
+                labelWrongLogin.Visible = true;
+				campoUsuario.Text = "";
+				campoClave.Text = "";
+            }
+            else
+            {
                 if (campoClave.Text == u.clave)
                 {
                     labelWrongLogin.Visible = false;
-                    if (u.empleado)
+                    usuarioActual = u.username;
+					if (u.empleado)
                     {
                         
                     }
@@ -53,12 +55,6 @@ namespace EntradasConciertos
                     campoUsuario.Text = "";
                     campoClave.Text = "";
                 }
-            }
-            else
-            {
-                labelWrongLogin.Visible = true;
-                campoUsuario.Text = "";
-                campoClave.Text = "";
             }
         }
 

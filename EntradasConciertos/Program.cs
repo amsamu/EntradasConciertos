@@ -16,7 +16,6 @@ namespace EntradasConciertos
         [STAThread]
         static void Main()
         {
-            listaUsuarios = leerListaUsuarios();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new VentanaLogin());
@@ -24,78 +23,69 @@ namespace EntradasConciertos
 
         public static ArrayList listaUsuarios;
         static string ficheroUsuarios = "usuarios.txt";
+        public static string usuarioActual = "";
 
         public static void anadirUsuario(Usuario u)
         {
             using (StreamWriter writetext = new StreamWriter(ficheroUsuarios, true))
             {
-               writetext.WriteLine(u.usuario + ";" + u.clave + ";" + u.empleado);
+               writetext.WriteLine(u.username + ";" + u.clave + ";" + u.empleado);
             }
         }
-
-        public static void escribirListaUsuarios(ArrayList usuarios)
+		
+		public static Usuario EncontrarUsuario(string nombre)
         {
-            using (StreamWriter writetext = new StreamWriter(ficheroUsuarios, true))
+            Usuario resultado = null;
+			if (File.Exists(ficheroUsuarios))
             {
-                foreach (Usuario u in usuarios){
-                    writetext.WriteLine(u.usuario + ";" + u.clave + ";" + u.empleado);
-                }
-                //writetext.WriteLine("Rickard;northremembers;true");
-                //writetext.WriteLine("Edmure;tullyrules;false");
-            }
-        }
-
-        public static ArrayList leerListaUsuarios()
-        {
-            ArrayList usuarios = new ArrayList();
-            if (File.Exists(ficheroUsuarios))
-            {
-                using (StreamReader readtext = new StreamReader(ficheroUsuarios))
-                {
-                    string line = readtext.ReadLine();
-                    while (line != null)
-                    {
-                        string[] atributos = line.Split(';');
-                        usuarios.Add(new Usuario(atributos[0], atributos[1], Convert.ToBoolean(atributos[2])));
-                        line = readtext.ReadLine();
-                    }
-                }
-            }
+				using(StreamReader sr = new StreamReader(ficheroUsuarios))
+				{
+					string linea = sr.ReadLine();
+					while(linea!=null && resultado == null)
+					{
+						string[] partesLinea = linea.Split(';');
+						if (partesLinea[0] == nombre)
+						{
+							resultado = new Usuario(partesLinea[0], partesLinea[1], Convert.ToBoolean(partesLinea[2]));
+						}
+						linea = sr.ReadLine();
+					}
+				}
+			}
             else
             {
                 File.Create(ficheroUsuarios);
             }
-            return usuarios;
+            return resultado;
         }
-
-        public static int findUser(string usuario)
+		
+		public static bool ExisteUsuario(string nombre)
         {
-            int pos = -1;
-            int i = 0;
-            while (i < listaUsuarios.Count && pos!=-1)
+            bool existe = false;
+            if (EncontrarUsuario(nombre) != null)
             {
-                string usuarioLista = (string)listaUsuarios[i];
-                if (usuarioLista.Split(';')[0] == usuario)
+                existe = true;
+            }
+            return existe;
+        }
+		
+		public static int ContarUsuarios()
+        {
+            int contador = 0;
+            if (!File.Exists(ficheroUsuarios))
+            {
+                File.Create(ficheroUsuarios);
+            }
+            using (StreamReader sr = new StreamReader(ficheroUsuarios))
+            {
+                string linea = sr.ReadLine();
+                while (linea != null)
                 {
-                    pos = i;
-                }
-                else
-                {
-                    i++;
+                    contador++;
+                    linea = sr.ReadLine();
                 }
             }
-            return pos;
+            return contador;
         }
-
-        public static bool userExists(string usuario)
-        {
-            bool exists = false;
-            if (findUser(usuario) != -1)
-            {
-                exists = true;
-            }
-            return exists;
-        }
-
     }
 }
