@@ -43,7 +43,8 @@ namespace EntradasConciertos
                     }
                     else
                     {
-                        
+                        new ListaConciertos().Show();
+                        this.Hide();
                     }
                 }
                 else

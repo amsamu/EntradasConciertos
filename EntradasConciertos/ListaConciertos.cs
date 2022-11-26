@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EntradasConciertos
 {
-    public partial class Form1 : Form
+    public partial class ListaConciertos : Form
     {
-        public Form1()
+        public ListaConciertos()
         {
             InitializeComponent();
         }

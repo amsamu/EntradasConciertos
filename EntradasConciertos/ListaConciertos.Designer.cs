@@ -1,6 +1,6 @@
 ﻿namespace EntradasConciertos
 {
-    partial class Form1
+    partial class ListaConciertos
     {
         /// <summary>
         /// Required designer variable.
