@@ -17,6 +17,7 @@ namespace EntradasConciertos
         public VentanaLogin()
         {
             InitializeComponent();
+            labelNumUsuariosReg.Text += Convert.ToString(ContarUsuarios());
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -38,14 +39,14 @@ namespace EntradasConciertos
                 if (campoClave.Text == u.clave)
                 {
                     labelWrongLogin.Visible = false;
-                    usuarioActual = u.username;
 					if (u.empleado)
                     {
-                        
+                        new ListaConciertosEmpleado().Show();
+                        this.Hide();
                     }
                     else
                     {
-                        new ListaConciertos().Show();
+                        new ListaConciertosCliente().Show();
                         this.Hide();
                     }
                 }

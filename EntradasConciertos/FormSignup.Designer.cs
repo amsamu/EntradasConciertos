@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaSignup));
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.checkEmpleado = new System.Windows.Forms.CheckBox();
             this.campoConfirmClave = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.botonCancelar = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.labelPwDontMatch = new System.Windows.Forms.Label();
             this.labelEmptyFields = new System.Windows.Forms.Label();
             this.fondoLogin = new System.Windows.Forms.PictureBox();
-            this.checkEmpleado = new System.Windows.Forms.CheckBox();
             this.panelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fondoLogin)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,16 @@
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(316, 348);
             this.panelLogin.TabIndex = 5;
+            // 
+            // checkEmpleado
+            // 
+            this.checkEmpleado.AutoSize = true;
+            this.checkEmpleado.Location = new System.Drawing.Point(81, 236);
+            this.checkEmpleado.Name = "checkEmpleado";
+            this.checkEmpleado.Size = new System.Drawing.Size(191, 22);
+            this.checkEmpleado.TabIndex = 4;
+            this.checkEmpleado.Text = "Empleado de la empresa";
+            this.checkEmpleado.UseVisualStyleBackColor = true;
             // 
             // campoConfirmClave
             // 
@@ -97,7 +107,7 @@
             this.botonCancelar.Location = new System.Drawing.Point(183, 294);
             this.botonCancelar.Name = "botonCancelar";
             this.botonCancelar.Size = new System.Drawing.Size(90, 31);
-            this.botonCancelar.TabIndex = 5;
+            this.botonCancelar.TabIndex = 6;
             this.botonCancelar.Text = "Cancelar";
             this.botonCancelar.UseVisualStyleBackColor = true;
             this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
@@ -121,7 +131,7 @@
             this.botonConfirmar.Location = new System.Drawing.Point(38, 294);
             this.botonConfirmar.Name = "botonConfirmar";
             this.botonConfirmar.Size = new System.Drawing.Size(90, 31);
-            this.botonConfirmar.TabIndex = 4;
+            this.botonConfirmar.TabIndex = 5;
             this.botonConfirmar.Text = "Confirmar";
             this.botonConfirmar.UseVisualStyleBackColor = true;
             this.botonConfirmar.Click += new System.EventHandler(this.botonConfirmar_Click);
@@ -200,16 +210,6 @@
             this.fondoLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.fondoLogin.TabIndex = 0;
             this.fondoLogin.TabStop = false;
-            // 
-            // checkEmpleado
-            // 
-            this.checkEmpleado.AutoSize = true;
-            this.checkEmpleado.Location = new System.Drawing.Point(81, 236);
-            this.checkEmpleado.Name = "checkEmpleado";
-            this.checkEmpleado.Size = new System.Drawing.Size(191, 22);
-            this.checkEmpleado.TabIndex = 14;
-            this.checkEmpleado.Text = "Empleado de la empresa";
-            this.checkEmpleado.UseVisualStyleBackColor = true;
             // 
             // VentanaSignup
             // 

@@ -38,6 +38,7 @@
             this.labelClave = new System.Windows.Forms.Label();
             this.labelUsuario = new System.Windows.Forms.Label();
             this.fondoLogin = new System.Windows.Forms.PictureBox();
+            this.labelNumUsuariosReg = new System.Windows.Forms.Label();
             this.panelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fondoLogin)).BeginInit();
             this.SuspendLayout();
@@ -45,6 +46,7 @@
             // panelLogin
             // 
             this.panelLogin.BackColor = System.Drawing.SystemColors.Desktop;
+            this.panelLogin.Controls.Add(this.labelNumUsuariosReg);
             this.panelLogin.Controls.Add(this.botonRegistrarse);
             this.panelLogin.Controls.Add(this.labelWrongLogin);
             this.panelLogin.Controls.Add(this.botonEntrar);
@@ -56,7 +58,7 @@
             this.panelLogin.ForeColor = System.Drawing.Color.Snow;
             this.panelLogin.Location = new System.Drawing.Point(235, 116);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(335, 196);
+            this.panelLogin.Size = new System.Drawing.Size(335, 232);
             this.panelLogin.TabIndex = 5;
             // 
             // botonRegistrarse
@@ -144,6 +146,15 @@
             this.fondoLogin.TabIndex = 0;
             this.fondoLogin.TabStop = false;
             // 
+            // labelNumUsuariosReg
+            // 
+            this.labelNumUsuariosReg.AutoSize = true;
+            this.labelNumUsuariosReg.Location = new System.Drawing.Point(46, 200);
+            this.labelNumUsuariosReg.Name = "labelNumUsuariosReg";
+            this.labelNumUsuariosReg.Size = new System.Drawing.Size(171, 18);
+            this.labelNumUsuariosReg.TabIndex = 9;
+            this.labelNumUsuariosReg.Text = "Nº usuarios registrados: ";
+            // 
             // VentanaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,6 +185,7 @@
         private System.Windows.Forms.Button botonEntrar;
         private System.Windows.Forms.Label labelWrongLogin;
         private System.Windows.Forms.Button botonRegistrarse;
+        private System.Windows.Forms.Label labelNumUsuariosReg;
     }
 }
 

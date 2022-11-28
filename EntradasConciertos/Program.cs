@@ -21,9 +21,9 @@ namespace EntradasConciertos
             Application.Run(new VentanaLogin());
         }
 
-        public static ArrayList listaUsuarios;
         static string ficheroUsuarios = "usuarios.txt";
-        public static string usuarioActual = "";
+        static string ficheroConciertos = "datos-conciertos.txt";
+
 
         public static void anadirUsuario(Usuario u)
         {
@@ -87,5 +87,43 @@ namespace EntradasConciertos
             }
             return contador;
         }
+
+        public static ArrayList LeerConciertos()
+        {
+            ArrayList listaConciertos = new ArrayList();
+            if (File.Exists(ficheroConciertos))
+            {
+                using (StreamReader sr = new StreamReader(ficheroConciertos))
+                {
+                    string linea = sr.ReadLine();
+                    while (linea != null)
+                    {
+                        string[] grupoYDatos = linea.Split(':');
+                        string[] datosConcierto = grupoYDatos[1].Split(';');
+
+                        listaConciertos.Add(new Concierto(grupoYDatos[0], datosConcierto[0], datosConcierto[1], datosConcierto[2]));
+                        linea = sr.ReadLine();
+                    }
+                }
+            }
+            else
+            {
+                File.Create(ficheroConciertos);
+            }
+            return listaConciertos;
+        }
+
+        public static void EscribirListaConciertos(ArrayList listaConciertos)
+        {
+            using (StreamWriter writetext = new StreamWriter(ficheroConciertos))
+            {
+                foreach (Concierto c in listaConciertos)
+                {
+                    writetext.WriteLine(c.grupo + ":" + c.ciudad + ";" + c.lugar + ";" +c.fechaString);
+                }
+            }
+        }
+
     }
+
 }

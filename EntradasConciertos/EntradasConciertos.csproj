@@ -62,11 +62,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ListaConciertos.cs">
+    <Compile Include="Concierto.cs" />
+    <Compile Include="DetallesConciertoStarset.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListaConciertos.Designer.cs">
-      <DependentUpon>ListaConciertos.cs</DependentUpon>
+    <Compile Include="DetallesConciertoStarset.Designer.cs">
+      <DependentUpon>DetallesConciertoStarset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetallesConciertoMCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetallesConciertoMCR.Designer.cs">
+      <DependentUpon>DetallesConciertoMCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetallesConciertoTOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetallesConciertoTOP.Designer.cs">
+      <DependentUpon>DetallesConciertoTOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaConciertosEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaConciertosEmpleado.Designer.cs">
+      <DependentUpon>ListaConciertosEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaConciertosCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaConciertosCliente.Designer.cs">
+      <DependentUpon>ListaConciertosCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSignup.cs">
       <SubType>Form</SubType>
@@ -83,8 +108,20 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
-    <EmbeddedResource Include="ListaConciertos.resx">
-      <DependentUpon>ListaConciertos.cs</DependentUpon>
+    <EmbeddedResource Include="DetallesConciertoStarset.resx">
+      <DependentUpon>DetallesConciertoStarset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetallesConciertoMCR.resx">
+      <DependentUpon>DetallesConciertoMCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetallesConciertoTOP.resx">
+      <DependentUpon>DetallesConciertoTOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaConciertosEmpleado.resx">
+      <DependentUpon>ListaConciertosEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaConciertosCliente.resx">
+      <DependentUpon>ListaConciertosCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSignup.resx">
       <DependentUpon>FormSignup.cs</DependentUpon>
@@ -124,6 +161,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ticketport_main.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top-trenchera.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\my-chemical-romance.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Starset_Band_Photo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locationicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-map-location-location-icon-5abbd65cb3e283.6442954415222595487368.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5a22a5c89d5fc3.4724282915122201046446.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-world-computer-icons-globe-internet-5ad9bc3b7243d7.3629179815242189394681.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61489df2e8157300048d701b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61489df2e8157300048d701b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

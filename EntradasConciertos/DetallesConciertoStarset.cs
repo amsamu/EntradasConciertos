@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EntradasConciertos
 {
-    public partial class ListaConciertos : Form
+    public partial class DetallesConciertoStarset : Form
     {
-        public ListaConciertos()
+        public DetallesConciertoStarset()
         {
             InitializeComponent();
         }
@@ -22,9 +22,15 @@ namespace EntradasConciertos
             Application.Exit();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void botonVolver_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            new ListaConciertosCliente().Show();
+        }
 
+        private void botonComprar_Click(object sender, EventArgs e)
+        {
+            labelEntradasAdquiridas.Visible = true;
         }
     }
 }
