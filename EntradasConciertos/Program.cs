@@ -25,6 +25,7 @@ namespace EntradasConciertos
         static string ficheroConciertos = "datos-conciertos.txt";
         public static char simboloDivisa = '€';
 
+        // Método para añadir un solo usuario al fichero.
         public static void anadirUsuario(Usuario u)
         {
             using (StreamWriter writetext = new StreamWriter(ficheroUsuarios, true))
@@ -33,6 +34,7 @@ namespace EntradasConciertos
             }
         }
 		
+        // Método para buscar un usuario por el nombre, si no existe devuelve null.
 		public static Usuario EncontrarUsuario(string nombre)
         {
             Usuario resultado = null;
@@ -59,6 +61,7 @@ namespace EntradasConciertos
             return resultado;
         }
 		
+        // Método que llama a EncontrarUsuario solo para comprobar si un usuario existe o no, devuelve true o false en consecuencia.
 		public static bool ExisteUsuario(string nombre)
         {
             bool existe = false;
@@ -69,6 +72,7 @@ namespace EntradasConciertos
             return existe;
         }
 		
+        // Método que recorre el fichero de usuarios y cuenta el número total.
 		public static int ContarUsuarios()
         {
             int contador = 0;
@@ -88,6 +92,7 @@ namespace EntradasConciertos
             return contador;
         }
 
+        // Método que lee el fichero de usuarios y los carga en un ArrayList.
         public static ArrayList LeerConciertos()
         {
             ArrayList listaConciertos = new ArrayList();
@@ -121,6 +126,8 @@ namespace EntradasConciertos
             return listaConciertos;
         }
 
+        // Método para volver a escribir la lista entera de usuarios al fichero para reflejar los cambios
+        // que se hayan hecho.
         public static void EscribirListaConciertos(ArrayList listaConciertos)
         {
             using (StreamWriter writetext = new StreamWriter(ficheroConciertos))

@@ -54,6 +54,7 @@ namespace EntradasConciertos
             selecFechaTOP.Value = ((Concierto)listaConciertos[0]).GetFecha();
             numEntradasTOP.Value = ((Concierto)listaConciertos[0]).entradasDisponibles;
             precioEntradaTOP.Value = ((Concierto)listaConciertos[0]).precioEntrada;
+            labelSimboloDivisaTOP.Text = "" + simboloDivisa;
 
             campoCiudadMCR.Text = ((Concierto)listaConciertos[1]).ciudad;
             campoLugarMCR.Text = ((Concierto)listaConciertos[1]).lugar;
@@ -61,6 +62,7 @@ namespace EntradasConciertos
             selecFechaMCR.Value = ((Concierto)listaConciertos[1]).GetFecha();
             numEntradasMCR.Value = ((Concierto)listaConciertos[1]).entradasDisponibles;
             precioEntradaMCR.Value = ((Concierto)listaConciertos[1]).precioEntrada;
+            labelSimboloDivisaMCR.Text = "" + simboloDivisa;
 
             campoCiudadStarset.Text = ((Concierto)listaConciertos[2]).ciudad;
             campoLugarStarset.Text = ((Concierto)listaConciertos[2]).lugar;
@@ -68,6 +70,7 @@ namespace EntradasConciertos
             selecFechaStarset.Value = ((Concierto)listaConciertos[2]).GetFecha();
             numEntradasStarset.Value = ((Concierto)listaConciertos[2]).entradasDisponibles;
             precioEntradaStarset.Value = ((Concierto)listaConciertos[2]).precioEntrada;
+            labelSimboloDivisaStarset.Text = "" + simboloDivisa;
 
             seHanRealizadoCambios = false;
         }

@@ -31,8 +31,6 @@ namespace EntradasConciertos
             if (u == null)
             {
                 labelWrongLogin.Visible = true;
-				campoUsuario.Text = "";
-				campoClave.Text = "";
             }
             else
             {
@@ -53,8 +51,6 @@ namespace EntradasConciertos
                 else
                 {
                     labelWrongLogin.Visible = true;
-                    campoUsuario.Text = "";
-                    campoClave.Text = "";
                 }
             }
         }

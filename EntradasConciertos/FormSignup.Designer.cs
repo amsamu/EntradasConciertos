@@ -222,7 +222,7 @@
             this.MaximizeBox = false;
             this.Name = "VentanaSignup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cear cuenta";
+            this.Text = "sssss";
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fondoLogin)).EndInit();
