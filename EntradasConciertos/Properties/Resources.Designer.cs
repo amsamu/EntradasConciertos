@@ -113,6 +113,16 @@ namespace EntradasConciertos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Imagine_Dragons_1200x7991 {
+            get {
+                object obj = ResourceManager.GetObject("Imagine-Dragons-1200x7991", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kisspng_computer_icons_map_location_location_icon_5abbd65cb3e283_6442954415222595487368 {
             get {
                 object obj = ResourceManager.GetObject("kisspng-computer-icons-map-location-location-icon-5abbd65cb3e283.6442954415222595" +
@@ -148,6 +158,26 @@ namespace EntradasConciertos.Properties {
         internal static System.Drawing.Bitmap logo_MCR_invert {
             get {
                 object obj = ResourceManager.GetObject("logo-MCR-invert", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_STARSET_invert {
+            get {
+                object obj = ResourceManager.GetObject("logo-STARSET-invert", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_TOP {
+            get {
+                object obj = ResourceManager.GetObject("logo-TOP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

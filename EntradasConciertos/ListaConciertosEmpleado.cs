@@ -29,6 +29,23 @@ namespace EntradasConciertos
             PonerInfoConciertos(); // Pongo la info de los conciertos en los elementos de la interfaz gráfica.
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (seHanRealizadoCambios && !labelCambiosGuardados.Visible)
+            {
+                DialogResult confirmarCierre = MessageBox.Show("Hay cambios sin guardar." +
+                    " ¿Seguro que deseas salir?", "Cambios sin guardar", MessageBoxButtons.YesNo);
+                if (confirmarCierre == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+            }
+            else
+            {
+                Application.Exit();
+            }
+        }
+
         private void PonerInfoConciertos()
         {
             campoCiudadTOP.Text = ((Concierto)listaConciertos[0]).ciudad;
@@ -45,11 +62,6 @@ namespace EntradasConciertos
             campoLugarStarset.Text = ((Concierto)listaConciertos[2]).lugar;
             selecFechaStarset.CustomFormat = "dd/MM/yyyy";
             selecFechaStarset.Value = ((Concierto)listaConciertos[2]).GetFecha();
-        }
-
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            Application.Exit();
         }
 
         private void botonCerrarSesion_Click(object sender, EventArgs e)
@@ -69,7 +81,6 @@ namespace EntradasConciertos
                 this.Hide();
                 new VentanaLogin().Show();
             }
-            
         }
 
         private void masInfoTOP_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

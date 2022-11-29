@@ -23,7 +23,7 @@ namespace EntradasConciertos
 
         static string ficheroUsuarios = "usuarios.txt";
         static string ficheroConciertos = "datos-conciertos.txt";
-
+        public static char simboloDivisa = '€';
 
         public static void anadirUsuario(Usuario u)
         {
@@ -101,7 +101,15 @@ namespace EntradasConciertos
                         string[] grupoYDatos = linea.Split(':');
                         string[] datosConcierto = grupoYDatos[1].Split(';');
 
-                        listaConciertos.Add(new Concierto(grupoYDatos[0], datosConcierto[0], datosConcierto[1], datosConcierto[2]));
+                        string grupo = grupoYDatos[0];
+                        string ciudad = datosConcierto[0];
+                        string lugar = datosConcierto[1];
+                        string fechaString = datosConcierto[2];
+                        int entradasDisponibles = int.Parse(datosConcierto[3]);
+                        int precioEntrada = int.Parse(datosConcierto[4]);
+
+                        listaConciertos.Add(new Concierto(grupo, ciudad, lugar, fechaString,
+                            entradasDisponibles, precioEntrada));
                         linea = sr.ReadLine();
                     }
                 }
@@ -119,7 +127,8 @@ namespace EntradasConciertos
             {
                 foreach (Concierto c in listaConciertos)
                 {
-                    writetext.WriteLine(c.grupo + ":" + c.ciudad + ";" + c.lugar + ";" +c.fechaString);
+                    writetext.WriteLine(c.grupo + ":" + c.ciudad + ";" + c.lugar + ";" + c.fechaString
+                        + ";" + c.entradasDisponibles + ";" + c.precioEntrada);
                 }
             }
         }

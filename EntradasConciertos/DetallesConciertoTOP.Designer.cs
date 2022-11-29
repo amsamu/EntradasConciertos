@@ -29,12 +29,20 @@
         private void InitializeComponent()
         {
             this.panelInfoConcierto = new System.Windows.Forms.Panel();
+            this.labelSeparador1 = new System.Windows.Forms.Label();
+            this.labelNumPrecioTotal = new System.Windows.Forms.Label();
+            this.labelNumPrecioEntrada = new System.Windows.Forms.Label();
+            this.labelNumEntradasDisp = new System.Windows.Forms.Label();
+            this.labelSeparador2 = new System.Windows.Forms.Label();
+            this.labelPrecioTotal = new System.Windows.Forms.Label();
+            this.labelEntradasSeleccionadas = new System.Windows.Forms.Label();
+            this.labelPrecioPorEntrada = new System.Windows.Forms.Label();
+            this.labelEntradasDisponibles = new System.Windows.Forms.Label();
             this.numEntradas = new System.Windows.Forms.NumericUpDown();
             this.botonComprar = new System.Windows.Forms.Button();
             this.labelInfoConcierto = new System.Windows.Forms.Label();
             this.logoBanda = new System.Windows.Forms.PictureBox();
             this.botonVolver = new System.Windows.Forms.Button();
-            this.labelEntradasAdquiridas = new System.Windows.Forms.Label();
             this.panelInfoConcierto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numEntradas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoBanda)).BeginInit();
@@ -42,57 +50,162 @@
             // 
             // panelInfoConcierto
             // 
-            this.panelInfoConcierto.Controls.Add(this.labelEntradasAdquiridas);
+            this.panelInfoConcierto.BackColor = System.Drawing.Color.Black;
+            this.panelInfoConcierto.Controls.Add(this.labelSeparador1);
+            this.panelInfoConcierto.Controls.Add(this.labelNumPrecioTotal);
+            this.panelInfoConcierto.Controls.Add(this.labelNumPrecioEntrada);
+            this.panelInfoConcierto.Controls.Add(this.labelNumEntradasDisp);
+            this.panelInfoConcierto.Controls.Add(this.labelSeparador2);
+            this.panelInfoConcierto.Controls.Add(this.labelPrecioTotal);
+            this.panelInfoConcierto.Controls.Add(this.labelEntradasSeleccionadas);
+            this.panelInfoConcierto.Controls.Add(this.labelPrecioPorEntrada);
+            this.panelInfoConcierto.Controls.Add(this.labelEntradasDisponibles);
             this.panelInfoConcierto.Controls.Add(this.numEntradas);
             this.panelInfoConcierto.Controls.Add(this.botonComprar);
             this.panelInfoConcierto.Controls.Add(this.labelInfoConcierto);
             this.panelInfoConcierto.Controls.Add(this.logoBanda);
-            this.panelInfoConcierto.Location = new System.Drawing.Point(155, 47);
+            this.panelInfoConcierto.Location = new System.Drawing.Point(213, 47);
             this.panelInfoConcierto.Name = "panelInfoConcierto";
-            this.panelInfoConcierto.Size = new System.Drawing.Size(538, 410);
+            this.panelInfoConcierto.Size = new System.Drawing.Size(426, 410);
             this.panelInfoConcierto.TabIndex = 1;
+            // 
+            // labelSeparador1
+            // 
+            this.labelSeparador1.BackColor = System.Drawing.SystemColors.Control;
+            this.labelSeparador1.Location = new System.Drawing.Point(57, 158);
+            this.labelSeparador1.Name = "labelSeparador1";
+            this.labelSeparador1.Size = new System.Drawing.Size(300, 1);
+            this.labelSeparador1.TabIndex = 22;
+            // 
+            // labelNumPrecioTotal
+            // 
+            this.labelNumPrecioTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNumPrecioTotal.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelNumPrecioTotal.Location = new System.Drawing.Point(164, 289);
+            this.labelNumPrecioTotal.Name = "labelNumPrecioTotal";
+            this.labelNumPrecioTotal.Size = new System.Drawing.Size(183, 20);
+            this.labelNumPrecioTotal.TabIndex = 21;
+            this.labelNumPrecioTotal.Text = "0 €";
+            this.labelNumPrecioTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // labelNumPrecioEntrada
+            // 
+            this.labelNumPrecioEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNumPrecioEntrada.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelNumPrecioEntrada.Location = new System.Drawing.Point(241, 198);
+            this.labelNumPrecioEntrada.Name = "labelNumPrecioEntrada";
+            this.labelNumPrecioEntrada.Size = new System.Drawing.Size(106, 20);
+            this.labelNumPrecioEntrada.TabIndex = 20;
+            this.labelNumPrecioEntrada.Text = "xxx €";
+            this.labelNumPrecioEntrada.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // labelNumEntradasDisp
+            // 
+            this.labelNumEntradasDisp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNumEntradasDisp.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelNumEntradasDisp.Location = new System.Drawing.Point(245, 169);
+            this.labelNumEntradasDisp.Name = "labelNumEntradasDisp";
+            this.labelNumEntradasDisp.Size = new System.Drawing.Size(102, 20);
+            this.labelNumEntradasDisp.TabIndex = 19;
+            this.labelNumEntradasDisp.Text = "xxx";
+            this.labelNumEntradasDisp.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // labelSeparador2
+            // 
+            this.labelSeparador2.BackColor = System.Drawing.SystemColors.Control;
+            this.labelSeparador2.Location = new System.Drawing.Point(57, 238);
+            this.labelSeparador2.Name = "labelSeparador2";
+            this.labelSeparador2.Size = new System.Drawing.Size(300, 1);
+            this.labelSeparador2.TabIndex = 18;
+            // 
+            // labelPrecioTotal
+            // 
+            this.labelPrecioTotal.AutoSize = true;
+            this.labelPrecioTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrecioTotal.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelPrecioTotal.Location = new System.Drawing.Point(66, 289);
+            this.labelPrecioTotal.Name = "labelPrecioTotal";
+            this.labelPrecioTotal.Size = new System.Drawing.Size(92, 20);
+            this.labelPrecioTotal.TabIndex = 17;
+            this.labelPrecioTotal.Text = "Precio total:";
+            // 
+            // labelEntradasSeleccionadas
+            // 
+            this.labelEntradasSeleccionadas.AutoSize = true;
+            this.labelEntradasSeleccionadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEntradasSeleccionadas.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelEntradasSeleccionadas.Location = new System.Drawing.Point(66, 255);
+            this.labelEntradasSeleccionadas.Name = "labelEntradasSeleccionadas";
+            this.labelEntradasSeleccionadas.Size = new System.Drawing.Size(183, 20);
+            this.labelEntradasSeleccionadas.TabIndex = 16;
+            this.labelEntradasSeleccionadas.Text = "Entradas seleccionadas:";
+            // 
+            // labelPrecioPorEntrada
+            // 
+            this.labelPrecioPorEntrada.AutoSize = true;
+            this.labelPrecioPorEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrecioPorEntrada.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelPrecioPorEntrada.Location = new System.Drawing.Point(56, 198);
+            this.labelPrecioPorEntrada.Name = "labelPrecioPorEntrada";
+            this.labelPrecioPorEntrada.Size = new System.Drawing.Size(143, 20);
+            this.labelPrecioPorEntrada.TabIndex = 15;
+            this.labelPrecioPorEntrada.Text = "Precio por entrada:";
+            // 
+            // labelEntradasDisponibles
+            // 
+            this.labelEntradasDisponibles.AutoSize = true;
+            this.labelEntradasDisponibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEntradasDisponibles.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelEntradasDisponibles.Location = new System.Drawing.Point(56, 169);
+            this.labelEntradasDisponibles.Name = "labelEntradasDisponibles";
+            this.labelEntradasDisponibles.Size = new System.Drawing.Size(165, 20);
+            this.labelEntradasDisponibles.TabIndex = 14;
+            this.labelEntradasDisponibles.Text = "Entradas disponibles: ";
             // 
             // numEntradas
             // 
             this.numEntradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numEntradas.Location = new System.Drawing.Point(130, 342);
+            this.numEntradas.Location = new System.Drawing.Point(286, 253);
             this.numEntradas.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
             this.numEntradas.Name = "numEntradas";
-            this.numEntradas.Size = new System.Drawing.Size(52, 26);
+            this.numEntradas.Size = new System.Drawing.Size(61, 26);
             this.numEntradas.TabIndex = 12;
+            this.numEntradas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numEntradas.ValueChanged += new System.EventHandler(this.numEntradas_ValueChanged);
             // 
             // botonComprar
             // 
+            this.botonComprar.Enabled = false;
             this.botonComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonComprar.Location = new System.Drawing.Point(199, 336);
+            this.botonComprar.Location = new System.Drawing.Point(145, 330);
             this.botonComprar.Name = "botonComprar";
-            this.botonComprar.Size = new System.Drawing.Size(155, 36);
+            this.botonComprar.Size = new System.Drawing.Size(121, 36);
             this.botonComprar.TabIndex = 11;
-            this.botonComprar.Text = "Comprar entradas";
+            this.botonComprar.Text = "Comprar";
             this.botonComprar.UseVisualStyleBackColor = true;
             this.botonComprar.Click += new System.EventHandler(this.botonComprar_Click);
             // 
             // labelInfoConcierto
             // 
+            this.labelInfoConcierto.AutoSize = true;
             this.labelInfoConcierto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfoConcierto.Location = new System.Drawing.Point(113, 126);
+            this.labelInfoConcierto.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelInfoConcierto.Location = new System.Drawing.Point(47, 125);
             this.labelInfoConcierto.Name = "labelInfoConcierto";
-            this.labelInfoConcierto.Size = new System.Drawing.Size(318, 195);
+            this.labelInfoConcierto.Size = new System.Drawing.Size(300, 20);
             this.labelInfoConcierto.TabIndex = 10;
-            this.labelInfoConcierto.Text = "Como parte del Bandito Tour, tocarán los siguientes temas:\r\n1. Jumpsuit\r\n2. Nico " +
-    "And The Niners\r\n3. Chlorine\r\n4. Holding On To You\r\n5. Fairly Local\r\n6. Car Radio" +
-    "\r\n7. Trees";
+            this.labelInfoConcierto.Text = "Tocarán como parte de su gira \"Icy Tour\".";
             // 
             // logoBanda
             // 
-            this.logoBanda.Image = global::EntradasConciertos.Properties.Resources._61489df2e8157300048d701b1;
-            this.logoBanda.Location = new System.Drawing.Point(158, 16);
+            this.logoBanda.Image = global::EntradasConciertos.Properties.Resources.logo_TOP;
+            this.logoBanda.Location = new System.Drawing.Point(104, 2);
             this.logoBanda.Name = "logoBanda";
-            this.logoBanda.Size = new System.Drawing.Size(227, 95);
+            this.logoBanda.Size = new System.Drawing.Size(227, 120);
             this.logoBanda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoBanda.TabIndex = 9;
             this.logoBanda.TabStop = false;
@@ -107,18 +220,6 @@
             this.botonVolver.Text = "Volver";
             this.botonVolver.UseVisualStyleBackColor = true;
             this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
-            // 
-            // labelEntradasAdquiridas
-            // 
-            this.labelEntradasAdquiridas.AutoSize = true;
-            this.labelEntradasAdquiridas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEntradasAdquiridas.ForeColor = System.Drawing.Color.Green;
-            this.labelEntradasAdquiridas.Location = new System.Drawing.Point(196, 384);
-            this.labelEntradasAdquiridas.Name = "labelEntradasAdquiridas";
-            this.labelEntradasAdquiridas.Size = new System.Drawing.Size(154, 17);
-            this.labelEntradasAdquiridas.TabIndex = 13;
-            this.labelEntradasAdquiridas.Text = "Entradas adquiridas";
-            this.labelEntradasAdquiridas.Visible = false;
             // 
             // DetallesConciertoTOP
             // 
@@ -146,6 +247,14 @@
         private System.Windows.Forms.Label labelInfoConcierto;
         private System.Windows.Forms.NumericUpDown numEntradas;
         private System.Windows.Forms.Button botonComprar;
-        private System.Windows.Forms.Label labelEntradasAdquiridas;
+        private System.Windows.Forms.Label labelPrecioTotal;
+        private System.Windows.Forms.Label labelEntradasSeleccionadas;
+        private System.Windows.Forms.Label labelPrecioPorEntrada;
+        private System.Windows.Forms.Label labelEntradasDisponibles;
+        private System.Windows.Forms.Label labelSeparador2;
+        private System.Windows.Forms.Label labelSeparador1;
+        private System.Windows.Forms.Label labelNumPrecioTotal;
+        private System.Windows.Forms.Label labelNumPrecioEntrada;
+        private System.Windows.Forms.Label labelNumEntradasDisp;
     }
 }

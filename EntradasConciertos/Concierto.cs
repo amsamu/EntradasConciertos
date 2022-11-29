@@ -14,12 +14,18 @@ namespace EntradasConciertos
         public string lugar { get; set; }
         public string fechaString { get; set; }
 
-        public Concierto(string grupo, string ciudad, string lugar, string fechaString)
+        public int entradasDisponibles {  get; set; }
+        public int precioEntrada { get; set; }
+
+        public Concierto(string grupo, string ciudad, string lugar, string fechaString, 
+            int entradasDisponibles, int precioEntrada)
         {
             this.grupo = grupo;
             this.ciudad = ciudad;
             this.lugar = lugar;
             this.fechaString = fechaString;
+            this.entradasDisponibles = entradasDisponibles;
+            this.precioEntrada = precioEntrada;
         }
 
         public DateTime GetFecha()
