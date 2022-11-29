@@ -38,7 +38,6 @@
             this.labelSeparador = new System.Windows.Forms.Label();
             this.botonConfirmarPago = new System.Windows.Forms.Button();
             this.labelEligeMetodoPago = new System.Windows.Forms.Label();
-            this.campoEmail = new System.Windows.Forms.TextBox();
             this.labelContrasena = new System.Windows.Forms.Label();
             this.campoNumTarjeta = new System.Windows.Forms.TextBox();
             this.labelNumTarjeta = new System.Windows.Forms.Label();
@@ -46,6 +45,8 @@
             this.panelOpcionesPago = new System.Windows.Forms.Panel();
             this.opcionPayPal = new System.Windows.Forms.RadioButton();
             this.opcionTarjeta = new System.Windows.Forms.RadioButton();
+            this.campoEmail = new System.Windows.Forms.TextBox();
+            this.botonVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelPago.SuspendLayout();
             this.panelOpcionesPago.SuspendLayout();
@@ -72,12 +73,12 @@
             this.panelPago.Controls.Add(this.labelSeparador);
             this.panelPago.Controls.Add(this.botonConfirmarPago);
             this.panelPago.Controls.Add(this.labelEligeMetodoPago);
-            this.panelPago.Controls.Add(this.campoEmail);
             this.panelPago.Controls.Add(this.labelContrasena);
             this.panelPago.Controls.Add(this.campoNumTarjeta);
             this.panelPago.Controls.Add(this.labelNumTarjeta);
             this.panelPago.Controls.Add(this.labelFechaCaducidad);
             this.panelPago.Controls.Add(this.panelOpcionesPago);
+            this.panelPago.Controls.Add(this.campoEmail);
             this.panelPago.Location = new System.Drawing.Point(153, 20);
             this.panelPago.Name = "panelPago";
             this.panelPago.Size = new System.Drawing.Size(516, 382);
@@ -87,19 +88,23 @@
             // 
             this.campoCVV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCVV.Location = new System.Drawing.Point(179, 265);
+            this.campoCVV.MaxLength = 3;
             this.campoCVV.Name = "campoCVV";
             this.campoCVV.Size = new System.Drawing.Size(79, 26);
             this.campoCVV.TabIndex = 33;
             this.campoCVV.Visible = false;
+            this.campoCVV.TextChanged += new System.EventHandler(this.campoCVV_TextChanged);
             // 
             // campoFechaCaducidad
             // 
             this.campoFechaCaducidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoFechaCaducidad.Location = new System.Drawing.Point(179, 223);
+            this.campoFechaCaducidad.MaxLength = 5;
             this.campoFechaCaducidad.Name = "campoFechaCaducidad";
             this.campoFechaCaducidad.Size = new System.Drawing.Size(79, 26);
             this.campoFechaCaducidad.TabIndex = 32;
             this.campoFechaCaducidad.Visible = false;
+            this.campoFechaCaducidad.TextChanged += new System.EventHandler(this.campoFechaCaducidad_TextChanged);
             // 
             // labelCVV
             // 
@@ -118,9 +123,11 @@
             this.campoContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoContrasena.Location = new System.Drawing.Point(179, 223);
             this.campoContrasena.Name = "campoContrasena";
+            this.campoContrasena.PasswordChar = '●';
             this.campoContrasena.Size = new System.Drawing.Size(212, 26);
             this.campoContrasena.TabIndex = 26;
             this.campoContrasena.Visible = false;
+            this.campoContrasena.TextChanged += new System.EventHandler(this.campoContrasena_TextChanged);
             // 
             // labelEmail
             // 
@@ -165,15 +172,6 @@
             this.labelEligeMetodoPago.TabIndex = 10;
             this.labelEligeMetodoPago.Text = "Elige un método de pago:";
             // 
-            // campoEmail
-            // 
-            this.campoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoEmail.Location = new System.Drawing.Point(179, 176);
-            this.campoEmail.Name = "campoEmail";
-            this.campoEmail.Size = new System.Drawing.Size(212, 26);
-            this.campoEmail.TabIndex = 24;
-            this.campoEmail.Visible = false;
-            // 
             // labelContrasena
             // 
             this.labelContrasena.AutoSize = true;
@@ -190,10 +188,12 @@
             // 
             this.campoNumTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoNumTarjeta.Location = new System.Drawing.Point(179, 176);
+            this.campoNumTarjeta.MaxLength = 19;
             this.campoNumTarjeta.Name = "campoNumTarjeta";
             this.campoNumTarjeta.Size = new System.Drawing.Size(212, 26);
             this.campoNumTarjeta.TabIndex = 31;
             this.campoNumTarjeta.Visible = false;
+            this.campoNumTarjeta.TextChanged += new System.EventHandler(this.campoNumTarjeta_TextChanged);
             // 
             // labelNumTarjeta
             // 
@@ -256,12 +256,34 @@
             this.opcionTarjeta.UseVisualStyleBackColor = true;
             this.opcionTarjeta.CheckedChanged += new System.EventHandler(this.opcionTarjeta_CheckedChanged);
             // 
+            // campoEmail
+            // 
+            this.campoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoEmail.Location = new System.Drawing.Point(179, 176);
+            this.campoEmail.Name = "campoEmail";
+            this.campoEmail.Size = new System.Drawing.Size(212, 26);
+            this.campoEmail.TabIndex = 24;
+            this.campoEmail.Visible = false;
+            this.campoEmail.TextChanged += new System.EventHandler(this.campoEmail_TextChanged);
+            // 
+            // botonVolver
+            // 
+            this.botonVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonVolver.Location = new System.Drawing.Point(697, 20);
+            this.botonVolver.Name = "botonVolver";
+            this.botonVolver.Size = new System.Drawing.Size(91, 31);
+            this.botonVolver.TabIndex = 6;
+            this.botonVolver.Text = "Volver";
+            this.botonVolver.UseVisualStyleBackColor = true;
+            this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
+            // 
             // VentanaPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.panelPago);
             this.Controls.Add(this.pictureBox1);
             this.Name = "VentanaPago";
@@ -296,5 +318,6 @@
         private System.Windows.Forms.Panel panelOpcionesPago;
         private System.Windows.Forms.RadioButton opcionPayPal;
         private System.Windows.Forms.RadioButton opcionTarjeta;
+        private System.Windows.Forms.Button botonVolver;
     }
 }

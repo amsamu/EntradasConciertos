@@ -18,7 +18,7 @@ namespace EntradasConciertos
         // Variable boolean para tener constancia de cuando se hayan hecho cambios en los
         // datos de los conciertos con respecto al estado en el que estaban al abrirse
         // este form.
-        bool seHanRealizadoCambios = false;
+        bool seHanRealizadoCambios;
 
         ArrayList listaConciertos;
 
@@ -52,16 +52,24 @@ namespace EntradasConciertos
             campoLugarTOP.Text = ((Concierto)listaConciertos[0]).lugar;
             selecFechaTOP.CustomFormat = "dd/MM/yyyy";
             selecFechaTOP.Value = ((Concierto)listaConciertos[0]).GetFecha();
+            numEntradasTOP.Value = ((Concierto)listaConciertos[0]).entradasDisponibles;
+            precioEntradaTOP.Value = ((Concierto)listaConciertos[0]).precioEntrada;
 
             campoCiudadMCR.Text = ((Concierto)listaConciertos[1]).ciudad;
             campoLugarMCR.Text = ((Concierto)listaConciertos[1]).lugar;
             selecFechaMCR.CustomFormat = "dd/MM/yyyy";
             selecFechaMCR.Value = ((Concierto)listaConciertos[1]).GetFecha();
+            numEntradasMCR.Value = ((Concierto)listaConciertos[1]).entradasDisponibles;
+            precioEntradaMCR.Value = ((Concierto)listaConciertos[1]).precioEntrada;
 
             campoCiudadStarset.Text = ((Concierto)listaConciertos[2]).ciudad;
             campoLugarStarset.Text = ((Concierto)listaConciertos[2]).lugar;
             selecFechaStarset.CustomFormat = "dd/MM/yyyy";
             selecFechaStarset.Value = ((Concierto)listaConciertos[2]).GetFecha();
+            numEntradasStarset.Value = ((Concierto)listaConciertos[2]).entradasDisponibles;
+            precioEntradaStarset.Value = ((Concierto)listaConciertos[2]).precioEntrada;
+
+            seHanRealizadoCambios = false;
         }
 
         private void botonCerrarSesion_Click(object sender, EventArgs e)
@@ -107,15 +115,21 @@ namespace EntradasConciertos
             ((Concierto)listaConciertos[0]).ciudad = campoCiudadTOP.Text;
             ((Concierto)listaConciertos[0]).lugar = campoLugarTOP.Text;
             ((Concierto)listaConciertos[0]).fechaString = selecFechaTOP.Text;
+            ((Concierto)listaConciertos[0]).entradasDisponibles = (int)numEntradasTOP.Value;
+            ((Concierto)listaConciertos[0]).precioEntrada = (int)precioEntradaTOP.Value;
 
             ((Concierto)listaConciertos[1]).ciudad = campoCiudadMCR.Text;
             ((Concierto)listaConciertos[1]).lugar = campoLugarMCR.Text;
             ((Concierto)listaConciertos[1]).fechaString = selecFechaMCR.Text;
+            ((Concierto)listaConciertos[1]).entradasDisponibles = (int)numEntradasMCR.Value;
+            ((Concierto)listaConciertos[1]).precioEntrada = (int)precioEntradaMCR.Value;
 
             ((Concierto)listaConciertos[2]).ciudad = campoCiudadStarset.Text;
             ((Concierto)listaConciertos[2]).lugar = campoLugarStarset.Text;
             ((Concierto)listaConciertos[2]).fechaString = selecFechaStarset.Text;
-            
+            ((Concierto)listaConciertos[2]).entradasDisponibles = (int)numEntradasStarset.Value;
+            ((Concierto)listaConciertos[2]).precioEntrada = (int)precioEntradaStarset.Value;
+
             // Después escribo el ArrayList al fichero.
             EscribirListaConciertos(listaConciertos);
             // Muestro el mensaje de que los cambios se han guardado.
@@ -143,6 +157,17 @@ namespace EntradasConciertos
             labelCambiosGuardados.Visible = false;
             seHanRealizadoCambios = true;
         }
+        private void numEntradasTOP_ValueChanged(object sender, EventArgs e)
+        {
+            labelCambiosGuardados.Visible = false;
+            seHanRealizadoCambios = true;
+        }
+
+        private void precioEntradaTOP_ValueChanged(object sender, EventArgs e)
+        {
+            labelCambiosGuardados.Visible = false;
+            seHanRealizadoCambios = true;
+        }
 
         private void campoCiudadMCR_TextChanged(object sender, EventArgs e)
         {
@@ -162,6 +187,18 @@ namespace EntradasConciertos
             seHanRealizadoCambios = true;
         }
 
+        private void numEntradasMCR_ValueChanged(object sender, EventArgs e)
+        {
+            labelCambiosGuardados.Visible = false;
+            seHanRealizadoCambios = true;
+        }
+
+        private void precioEntradaMCR_ValueChanged(object sender, EventArgs e)
+        {
+            labelCambiosGuardados.Visible = false;
+            seHanRealizadoCambios = true;
+        }
+
         private void campoCiudadStarset_TextChanged(object sender, EventArgs e)
         {
             labelCambiosGuardados.Visible = false;
@@ -175,6 +212,18 @@ namespace EntradasConciertos
         }
 
         private void selecFechaStarset_ValueChanged(object sender, EventArgs e)
+        {
+            labelCambiosGuardados.Visible = false;
+            seHanRealizadoCambios = true;
+        }
+
+        private void numEntradasStarset_ValueChanged(object sender, EventArgs e)
+        {
+            labelCambiosGuardados.Visible = false;
+            seHanRealizadoCambios = true;
+        }
+
+        private void precioEntradaStarset_ValueChanged(object sender, EventArgs e)
         {
             labelCambiosGuardados.Visible = false;
             seHanRealizadoCambios = true;

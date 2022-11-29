@@ -16,6 +16,12 @@ namespace EntradasConciertos
     {
         int indiceConcierto;
         int numEntradas;
+        bool emailValido = false;
+        bool contrasenaValida = false;
+        bool numTarjetaValido = false;
+        bool fechaCaducidadValida = false;
+        bool cvvValido = false;
+
         public VentanaPago(int indiceConcierto, int numEntradas)
         {
             InitializeComponent();
@@ -73,14 +79,169 @@ namespace EntradasConciertos
 
         private void botonConfirmarPago_Click(object sender, EventArgs e)
         {
+
+            if (opcionTarjeta.Checked)
+            {   
+                // Si los datos de la tarjeta tienen formato válido, confirmo la operación. Si no, aviso al usuario.
+                if(numTarjetaValido && fechaCaducidadValida && cvvValido)
+                {
+                    confirmarPago();
+                }
+                else
+                {
+                    string mensaje = "";
+                    if (!numTarjetaValido)
+                    {
+                        mensaje += "El número de tarjeta debe de tener una longitud entre 16 y 19.\n";
+                    }
+                    if (!fechaCaducidadValida)
+                    {
+                        mensaje += "La fecha de caducidad debe tener el formato MM/AA.\n";
+                    }
+                    if (!cvvValido)
+                    {
+                        mensaje += "El CVV debe ser un número de 3 cifras.";
+                    }
+                    MessageBox.Show(mensaje, "Datos no válidos", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                // Si los datos de la cuenta de PayPal tienen formato válido, confirmo la operación. Si no, aviso al usuario.
+                if (emailValido && contrasenaValida)
+                {
+                    confirmarPago();
+                }
+                else
+                {
+                    string mensaje = "";
+                    if (!emailValido)
+                    {
+                        mensaje += "El email debe tener un formato válido de dirección de correo electrónico.\n";
+                    }
+                    if (!contrasenaValida)
+                    {
+                        mensaje += "La contraseña no puede estar en blanco.\n";
+                    }
+                    MessageBox.Show(mensaje, "Datos no válidos", MessageBoxButtons.OK);
+                }
+            }
+
+        }
+
+        private void confirmarPago()
+        {
+            // Resto el número de entradas que se acaban de comprar al número de entradas disponibles de este concierto.
             ArrayList listaConciertos = LeerConciertos();
             Concierto concierto = (Concierto)listaConciertos[indiceConcierto];
             concierto.entradasDisponibles -= numEntradas;
             EscribirListaConciertos(listaConciertos);
 
+            // Le digo al usuario que la operación se ha completado y le devuelvo a la venta de lista de conciertos.
             MessageBox.Show("La operación de pago se ha tramitado, pronto recibirá un email de confirmación.", "Operación confirmada", MessageBoxButtons.OK);
             this.Hide();
             new ListaConciertosCliente().Show();
+        }
+
+        private void campoEmail_TextChanged(object sender, EventArgs e)
+        {
+            string[] partesEmail = campoEmail.Text.Split('@');
+            // El email debe tener un solo @, la parte antes del @ debe tener al menos 1 carácter y la parte de después
+            // tiene que tener al menos 3.
+            if (partesEmail.Length == 2 && partesEmail[0].Length > 0 && partesEmail[1].Length > 2)
+            {
+                string[] partesDominio = partesEmail[1].Split('.');
+                // La parte después del @ (el dominio) debe tener al menos 1 punto.
+                if (partesDominio.Length > 1)
+                {
+                    string dominioFinal = partesDominio[partesDominio.Length - 1];
+                    // El dominio final debe tener al menos un carácter (.com, .net, .es, etc.).
+                    if (dominioFinal.Length > 0)
+                    {
+                        emailValido = true;
+                    }
+                    else
+                    {
+                        emailValido = false;
+                    }
+                }
+                else
+                {
+                    emailValido = false;
+                }
+            }
+            else
+            {
+                emailValido = false;
+            }
+        }
+
+        private void campoContrasena_TextChanged(object sender, EventArgs e)
+        {
+            // El campo de contraseña no puede estar vacío.
+            if(campoContrasena.Text.Length > 0)
+            {
+                contrasenaValida = true;
+            }
+            else
+            {
+                contrasenaValida = false;
+            }
+        }
+
+        private void campoNumTarjeta_TextChanged(object sender, EventArgs e)
+        {
+            // El número de tarjeta debe tener una longitud de entre 16 y 19.
+            if(campoNumTarjeta.Text.Length >= 16 && campoNumTarjeta.Text.Length <= 19)
+            {
+                numTarjetaValido = true;
+            }
+            else
+            {
+                numTarjetaValido = false;
+            }
+        }
+
+        private void campoFechaCaducidad_TextChanged(object sender, EventArgs e)
+        {
+            string[] partesFecha = campoFechaCaducidad.Text.Split('/');
+            if(partesFecha.Length == 2 && partesFecha[0].Length == 2 && partesFecha[1].Length == 2)
+            {
+                fechaCaducidadValida = true;
+            }
+            else
+            {
+                fechaCaducidadValida = false;
+            }
+        }
+
+        private void campoCVV_TextChanged(object sender, EventArgs e)
+        {
+            if(campoCVV.Text.Length == 3)
+            {
+                cvvValido = true;
+            }
+            else
+            {
+                cvvValido = false;
+            }
+        }
+
+        private void botonVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            switch (indiceConcierto)
+            {
+                case 0:
+                    new DetallesConciertoTOP().Show();
+                    break;
+                case 1:
+                    new DetallesConciertoMCR().Show();
+                    break;
+                case 2:
+                    new DetallesConciertoStarset().Show();
+                    break;
+            }
         }
     }
 }
