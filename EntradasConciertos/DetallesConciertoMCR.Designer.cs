@@ -232,6 +232,7 @@
             this.Name = "DetallesConciertoMCR";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Concierto My Chemical Romance";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DetallesConciertoMCR_FormClosed);
             this.panelInfoConcierto.ResumeLayout(false);
             this.panelInfoConcierto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numEntradas)).EndInit();

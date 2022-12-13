@@ -232,6 +232,7 @@
             this.Name = "DetallesConciertoStarset";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Concierto Starset";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DetallesConciertoStarset_FormClosed);
             this.panelInfoConcierto.ResumeLayout(false);
             this.panelInfoConcierto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numEntradas)).EndInit();

@@ -29,7 +29,7 @@ namespace EntradasConciertos
             PonerInfoConciertos(); // Pongo la info de los conciertos en los elementos de la interfaz gráfica.
         }
 
-        protected override void OnFormClosing(FormClosingEventArgs e)
+        private void ListaConciertosEmpleado_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (seHanRealizadoCambios && !labelCambiosGuardados.Visible)
             {
@@ -37,12 +37,12 @@ namespace EntradasConciertos
                     " ¿Seguro que deseas salir?", "Cambios sin guardar", MessageBoxButtons.YesNo);
                 if (confirmarCierre == DialogResult.Yes)
                 {
-                    Application.Exit();
+                    CerrarAplicacion();
                 }
             }
             else
             {
-                Application.Exit();
+                CerrarAplicacion();
             }
         }
 
@@ -83,35 +83,17 @@ namespace EntradasConciertos
                 DialogResult confirmarCierre = MessageBox.Show("Hay cambios sin guardar. ¿Seguro que deseas cerrar sesión?", "Cambios sin guardar", buttons);
                 if(confirmarCierre == DialogResult.Yes)
                 {
-                    this.Hide();
                     new VentanaLogin().Show();
+                    this.Close();
                 }
             }
             else
             {
-                this.Hide();
                 new VentanaLogin().Show();
+                this.Close();
             }
         }
 
-        private void masInfoTOP_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            new DetallesConciertoTOP().Show();
-        }
-
-        private void masInfoMCR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            new DetallesConciertoMCR().Show();
-        }
-
-        private void masInfoStarset_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            new DetallesConciertoStarset().Show();
-        }
-        
         private void botonGuardarCambios_Click(object sender, EventArgs e)
         {
             // Actualizo los datos de los tres conciertos en el ArrayList.
@@ -231,5 +213,6 @@ namespace EntradasConciertos
             labelCambiosGuardados.Visible = false;
             seHanRealizadoCambios = true;
         }
+
     }
 }

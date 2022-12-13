@@ -29,9 +29,9 @@ namespace EntradasConciertos
             this.numEntradas = numEntradas;
         }
 
-        protected override void OnFormClosing(FormClosingEventArgs e)
+        private void VentanaPago_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            CerrarAplicacion();
         }
 
         private void opcionTarjeta_CheckedChanged(object sender, EventArgs e)
@@ -139,8 +139,8 @@ namespace EntradasConciertos
 
             // Le digo al usuario que la operación se ha completado y le devuelvo a la venta de lista de conciertos.
             MessageBox.Show("La operación de pago se ha tramitado, pronto recibirá un email de confirmación.", "Operación confirmada", MessageBoxButtons.OK);
-            this.Hide();
             new ListaConciertosCliente().Show();
+            this.Close();
         }
 
         private void campoEmail_TextChanged(object sender, EventArgs e)
@@ -229,7 +229,6 @@ namespace EntradasConciertos
 
         private void botonVolver_Click(object sender, EventArgs e)
         {
-            this.Hide();
             switch (indiceConcierto)
             {
                 case 0:
@@ -242,6 +241,8 @@ namespace EntradasConciertos
                     new DetallesConciertoStarset().Show();
                     break;
             }
+            this.Close();
         }
+
     }
 }

@@ -22,9 +22,9 @@ namespace EntradasConciertos
             PonerInfoConcierto();
         }
 
-        protected override void OnFormClosing(FormClosingEventArgs e)
+        private void DetallesConciertoTOP_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            CerrarAplicacion();
         }
 
         private void PonerInfoConcierto()
@@ -37,14 +37,14 @@ namespace EntradasConciertos
 
         private void botonVolver_Click(object sender, EventArgs e)
         {
-            this.Hide();
             new ListaConciertosCliente().Show();
+            this.Close();
         }
 
         private void botonComprar_Click(object sender, EventArgs e)
         {
-            this.Hide();
             new VentanaPago(0, (int)numEntradas.Value).Show();
+            this.Close();
         }
 
         private void numEntradas_ValueChanged(object sender, EventArgs e)
@@ -59,5 +59,6 @@ namespace EntradasConciertos
             }
             labelNumPrecioTotal.Text = numEntradas.Value * concierto.precioEntrada + " " + simboloDivisa;
         }
+        
     }
 }

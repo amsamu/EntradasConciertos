@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.panelConciertoTwentyOnePilots = new System.Windows.Forms.Panel();
+            this.labelSimboloDivisaTOP = new System.Windows.Forms.Label();
+            this.precioEntradaTOP = new System.Windows.Forms.NumericUpDown();
+            this.labelPrecioEntradaTOP = new System.Windows.Forms.Label();
+            this.numEntradasTOP = new System.Windows.Forms.NumericUpDown();
+            this.labelEntradasDisponiblesTOP = new System.Windows.Forms.Label();
             this.imagenGloboTOP = new System.Windows.Forms.PictureBox();
             this.imagenCalendarioTOP = new System.Windows.Forms.PictureBox();
             this.imagenUbicacionTOP = new System.Windows.Forms.PictureBox();
@@ -38,6 +43,11 @@
             this.campoLugarTOP = new System.Windows.Forms.TextBox();
             this.campoCiudadTOP = new System.Windows.Forms.TextBox();
             this.panelConciertoMyChemicalRomance = new System.Windows.Forms.Panel();
+            this.labelSimboloDivisaMCR = new System.Windows.Forms.Label();
+            this.precioEntradaMCR = new System.Windows.Forms.NumericUpDown();
+            this.labelPrecioEntradaMCR = new System.Windows.Forms.Label();
+            this.numEntradasMCR = new System.Windows.Forms.NumericUpDown();
+            this.labelEntradasDisponiblesMCR = new System.Windows.Forms.Label();
             this.selecFechaMCR = new System.Windows.Forms.DateTimePicker();
             this.campoLugarMCR = new System.Windows.Forms.TextBox();
             this.campoCiudadMCR = new System.Windows.Forms.TextBox();
@@ -47,6 +57,11 @@
             this.labelMyChemicalRomance = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelConciertoStarset = new System.Windows.Forms.Panel();
+            this.labelSimboloDivisaStarset = new System.Windows.Forms.Label();
+            this.precioEntradaStarset = new System.Windows.Forms.NumericUpDown();
+            this.labelPrecioEntradaStarset = new System.Windows.Forms.Label();
+            this.numEntradasStarset = new System.Windows.Forms.NumericUpDown();
+            this.labelEntradasDisponiblesStarset = new System.Windows.Forms.Label();
             this.selecFechaStarset = new System.Windows.Forms.DateTimePicker();
             this.campoLugarStarset = new System.Windows.Forms.TextBox();
             this.campoCiudadStarset = new System.Windows.Forms.TextBox();
@@ -59,42 +74,27 @@
             this.botonCerrarSesion = new System.Windows.Forms.Button();
             this.botonGuardarCambios = new System.Windows.Forms.Button();
             this.labelCambiosGuardados = new System.Windows.Forms.Label();
-            this.labelEntradasDisponiblesTOP = new System.Windows.Forms.Label();
-            this.numEntradasTOP = new System.Windows.Forms.NumericUpDown();
-            this.precioEntradaTOP = new System.Windows.Forms.NumericUpDown();
-            this.labelPrecioEntradaTOP = new System.Windows.Forms.Label();
-            this.labelSimboloDivisaTOP = new System.Windows.Forms.Label();
-            this.labelSimboloDivisaMCR = new System.Windows.Forms.Label();
-            this.precioEntradaMCR = new System.Windows.Forms.NumericUpDown();
-            this.labelPrecioEntradaMCR = new System.Windows.Forms.Label();
-            this.numEntradasMCR = new System.Windows.Forms.NumericUpDown();
-            this.labelEntradasDisponiblesMCR = new System.Windows.Forms.Label();
-            this.labelSimboloDivisaStarset = new System.Windows.Forms.Label();
-            this.precioEntradaStarset = new System.Windows.Forms.NumericUpDown();
-            this.labelPrecioEntradaStarset = new System.Windows.Forms.Label();
-            this.numEntradasStarset = new System.Windows.Forms.NumericUpDown();
-            this.labelEntradasDisponiblesStarset = new System.Windows.Forms.Label();
             this.panelConciertoTwentyOnePilots.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.precioEntradaTOP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEntradasTOP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenGloboTOP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenCalendarioTOP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenUbicacionTOP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelConciertoMyChemicalRomance.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.precioEntradaMCR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEntradasMCR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenGloboMCR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenCalendarioMCR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenUbicacionMCR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelConciertoStarset.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.precioEntradaStarset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEntradasStarset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenGloboStarset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenCalendarioStarset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenUbicacionStarset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numEntradasTOP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.precioEntradaTOP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.precioEntradaMCR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numEntradasMCR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.precioEntradaStarset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numEntradasStarset)).BeginInit();
             this.SuspendLayout();
             // 
             // panelConciertoTwentyOnePilots
@@ -116,6 +116,66 @@
             this.panelConciertoTwentyOnePilots.Name = "panelConciertoTwentyOnePilots";
             this.panelConciertoTwentyOnePilots.Size = new System.Drawing.Size(200, 396);
             this.panelConciertoTwentyOnePilots.TabIndex = 1;
+            // 
+            // labelSimboloDivisaTOP
+            // 
+            this.labelSimboloDivisaTOP.AutoSize = true;
+            this.labelSimboloDivisaTOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSimboloDivisaTOP.Location = new System.Drawing.Point(144, 357);
+            this.labelSimboloDivisaTOP.Name = "labelSimboloDivisaTOP";
+            this.labelSimboloDivisaTOP.Size = new System.Drawing.Size(18, 20);
+            this.labelSimboloDivisaTOP.TabIndex = 16;
+            this.labelSimboloDivisaTOP.Text = "€";
+            // 
+            // precioEntradaTOP
+            // 
+            this.precioEntradaTOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.precioEntradaTOP.Location = new System.Drawing.Point(42, 355);
+            this.precioEntradaTOP.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.precioEntradaTOP.Name = "precioEntradaTOP";
+            this.precioEntradaTOP.Size = new System.Drawing.Size(100, 26);
+            this.precioEntradaTOP.TabIndex = 15;
+            this.precioEntradaTOP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.precioEntradaTOP.ValueChanged += new System.EventHandler(this.precioEntradaTOP_ValueChanged);
+            // 
+            // labelPrecioEntradaTOP
+            // 
+            this.labelPrecioEntradaTOP.AutoSize = true;
+            this.labelPrecioEntradaTOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrecioEntradaTOP.Location = new System.Drawing.Point(28, 334);
+            this.labelPrecioEntradaTOP.Name = "labelPrecioEntradaTOP";
+            this.labelPrecioEntradaTOP.Size = new System.Drawing.Size(134, 18);
+            this.labelPrecioEntradaTOP.TabIndex = 14;
+            this.labelPrecioEntradaTOP.Text = "Precio por entrada:";
+            // 
+            // numEntradasTOP
+            // 
+            this.numEntradasTOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numEntradasTOP.Location = new System.Drawing.Point(42, 295);
+            this.numEntradasTOP.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numEntradasTOP.Name = "numEntradasTOP";
+            this.numEntradasTOP.Size = new System.Drawing.Size(120, 26);
+            this.numEntradasTOP.TabIndex = 13;
+            this.numEntradasTOP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numEntradasTOP.ValueChanged += new System.EventHandler(this.numEntradasTOP_ValueChanged);
+            // 
+            // labelEntradasDisponiblesTOP
+            // 
+            this.labelEntradasDisponiblesTOP.AutoSize = true;
+            this.labelEntradasDisponiblesTOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEntradasDisponiblesTOP.Location = new System.Drawing.Point(28, 274);
+            this.labelEntradasDisponiblesTOP.Name = "labelEntradasDisponiblesTOP";
+            this.labelEntradasDisponiblesTOP.Size = new System.Drawing.Size(149, 18);
+            this.labelEntradasDisponiblesTOP.TabIndex = 12;
+            this.labelEntradasDisponiblesTOP.Text = "Entradas disponibles:";
             // 
             // imagenGloboTOP
             // 
@@ -215,6 +275,66 @@
             this.panelConciertoMyChemicalRomance.Size = new System.Drawing.Size(200, 396);
             this.panelConciertoMyChemicalRomance.TabIndex = 2;
             // 
+            // labelSimboloDivisaMCR
+            // 
+            this.labelSimboloDivisaMCR.AutoSize = true;
+            this.labelSimboloDivisaMCR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSimboloDivisaMCR.Location = new System.Drawing.Point(141, 357);
+            this.labelSimboloDivisaMCR.Name = "labelSimboloDivisaMCR";
+            this.labelSimboloDivisaMCR.Size = new System.Drawing.Size(18, 20);
+            this.labelSimboloDivisaMCR.TabIndex = 23;
+            this.labelSimboloDivisaMCR.Text = "€";
+            // 
+            // precioEntradaMCR
+            // 
+            this.precioEntradaMCR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.precioEntradaMCR.Location = new System.Drawing.Point(39, 355);
+            this.precioEntradaMCR.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.precioEntradaMCR.Name = "precioEntradaMCR";
+            this.precioEntradaMCR.Size = new System.Drawing.Size(100, 26);
+            this.precioEntradaMCR.TabIndex = 22;
+            this.precioEntradaMCR.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.precioEntradaMCR.ValueChanged += new System.EventHandler(this.precioEntradaMCR_ValueChanged);
+            // 
+            // labelPrecioEntradaMCR
+            // 
+            this.labelPrecioEntradaMCR.AutoSize = true;
+            this.labelPrecioEntradaMCR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrecioEntradaMCR.Location = new System.Drawing.Point(25, 334);
+            this.labelPrecioEntradaMCR.Name = "labelPrecioEntradaMCR";
+            this.labelPrecioEntradaMCR.Size = new System.Drawing.Size(134, 18);
+            this.labelPrecioEntradaMCR.TabIndex = 21;
+            this.labelPrecioEntradaMCR.Text = "Precio por entrada:";
+            // 
+            // numEntradasMCR
+            // 
+            this.numEntradasMCR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numEntradasMCR.Location = new System.Drawing.Point(39, 295);
+            this.numEntradasMCR.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numEntradasMCR.Name = "numEntradasMCR";
+            this.numEntradasMCR.Size = new System.Drawing.Size(120, 26);
+            this.numEntradasMCR.TabIndex = 20;
+            this.numEntradasMCR.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numEntradasMCR.ValueChanged += new System.EventHandler(this.numEntradasMCR_ValueChanged);
+            // 
+            // labelEntradasDisponiblesMCR
+            // 
+            this.labelEntradasDisponiblesMCR.AutoSize = true;
+            this.labelEntradasDisponiblesMCR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEntradasDisponiblesMCR.Location = new System.Drawing.Point(25, 274);
+            this.labelEntradasDisponiblesMCR.Name = "labelEntradasDisponiblesMCR";
+            this.labelEntradasDisponiblesMCR.Size = new System.Drawing.Size(149, 18);
+            this.labelEntradasDisponiblesMCR.TabIndex = 19;
+            this.labelEntradasDisponiblesMCR.Text = "Entradas disponibles:";
+            // 
             // selecFechaMCR
             // 
             this.selecFechaMCR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -312,6 +432,66 @@
             this.panelConciertoStarset.Name = "panelConciertoStarset";
             this.panelConciertoStarset.Size = new System.Drawing.Size(200, 396);
             this.panelConciertoStarset.TabIndex = 3;
+            // 
+            // labelSimboloDivisaStarset
+            // 
+            this.labelSimboloDivisaStarset.AutoSize = true;
+            this.labelSimboloDivisaStarset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSimboloDivisaStarset.Location = new System.Drawing.Point(142, 357);
+            this.labelSimboloDivisaStarset.Name = "labelSimboloDivisaStarset";
+            this.labelSimboloDivisaStarset.Size = new System.Drawing.Size(18, 20);
+            this.labelSimboloDivisaStarset.TabIndex = 23;
+            this.labelSimboloDivisaStarset.Text = "€";
+            // 
+            // precioEntradaStarset
+            // 
+            this.precioEntradaStarset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.precioEntradaStarset.Location = new System.Drawing.Point(40, 355);
+            this.precioEntradaStarset.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.precioEntradaStarset.Name = "precioEntradaStarset";
+            this.precioEntradaStarset.Size = new System.Drawing.Size(100, 26);
+            this.precioEntradaStarset.TabIndex = 22;
+            this.precioEntradaStarset.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.precioEntradaStarset.ValueChanged += new System.EventHandler(this.precioEntradaStarset_ValueChanged);
+            // 
+            // labelPrecioEntradaStarset
+            // 
+            this.labelPrecioEntradaStarset.AutoSize = true;
+            this.labelPrecioEntradaStarset.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrecioEntradaStarset.Location = new System.Drawing.Point(26, 334);
+            this.labelPrecioEntradaStarset.Name = "labelPrecioEntradaStarset";
+            this.labelPrecioEntradaStarset.Size = new System.Drawing.Size(134, 18);
+            this.labelPrecioEntradaStarset.TabIndex = 21;
+            this.labelPrecioEntradaStarset.Text = "Precio por entrada:";
+            // 
+            // numEntradasStarset
+            // 
+            this.numEntradasStarset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numEntradasStarset.Location = new System.Drawing.Point(40, 295);
+            this.numEntradasStarset.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numEntradasStarset.Name = "numEntradasStarset";
+            this.numEntradasStarset.Size = new System.Drawing.Size(120, 26);
+            this.numEntradasStarset.TabIndex = 20;
+            this.numEntradasStarset.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numEntradasStarset.ValueChanged += new System.EventHandler(this.numEntradasStarset_ValueChanged);
+            // 
+            // labelEntradasDisponiblesStarset
+            // 
+            this.labelEntradasDisponiblesStarset.AutoSize = true;
+            this.labelEntradasDisponiblesStarset.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEntradasDisponiblesStarset.Location = new System.Drawing.Point(26, 274);
+            this.labelEntradasDisponiblesStarset.Name = "labelEntradasDisponiblesStarset";
+            this.labelEntradasDisponiblesStarset.Size = new System.Drawing.Size(149, 18);
+            this.labelEntradasDisponiblesStarset.TabIndex = 19;
+            this.labelEntradasDisponiblesStarset.Text = "Entradas disponibles:";
             // 
             // selecFechaStarset
             // 
@@ -438,186 +618,6 @@
             this.labelCambiosGuardados.Text = "Cambios guardados correctamente.";
             this.labelCambiosGuardados.Visible = false;
             // 
-            // labelEntradasDisponiblesTOP
-            // 
-            this.labelEntradasDisponiblesTOP.AutoSize = true;
-            this.labelEntradasDisponiblesTOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEntradasDisponiblesTOP.Location = new System.Drawing.Point(28, 274);
-            this.labelEntradasDisponiblesTOP.Name = "labelEntradasDisponiblesTOP";
-            this.labelEntradasDisponiblesTOP.Size = new System.Drawing.Size(149, 18);
-            this.labelEntradasDisponiblesTOP.TabIndex = 12;
-            this.labelEntradasDisponiblesTOP.Text = "Entradas disponibles:";
-            // 
-            // numEntradasTOP
-            // 
-            this.numEntradasTOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numEntradasTOP.Location = new System.Drawing.Point(42, 295);
-            this.numEntradasTOP.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numEntradasTOP.Name = "numEntradasTOP";
-            this.numEntradasTOP.Size = new System.Drawing.Size(120, 26);
-            this.numEntradasTOP.TabIndex = 13;
-            this.numEntradasTOP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numEntradasTOP.ValueChanged += new System.EventHandler(this.numEntradasTOP_ValueChanged);
-            // 
-            // precioEntradaTOP
-            // 
-            this.precioEntradaTOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precioEntradaTOP.Location = new System.Drawing.Point(42, 355);
-            this.precioEntradaTOP.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.precioEntradaTOP.Name = "precioEntradaTOP";
-            this.precioEntradaTOP.Size = new System.Drawing.Size(100, 26);
-            this.precioEntradaTOP.TabIndex = 15;
-            this.precioEntradaTOP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.precioEntradaTOP.ValueChanged += new System.EventHandler(this.precioEntradaTOP_ValueChanged);
-            // 
-            // labelPrecioEntradaTOP
-            // 
-            this.labelPrecioEntradaTOP.AutoSize = true;
-            this.labelPrecioEntradaTOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrecioEntradaTOP.Location = new System.Drawing.Point(28, 334);
-            this.labelPrecioEntradaTOP.Name = "labelPrecioEntradaTOP";
-            this.labelPrecioEntradaTOP.Size = new System.Drawing.Size(134, 18);
-            this.labelPrecioEntradaTOP.TabIndex = 14;
-            this.labelPrecioEntradaTOP.Text = "Precio por entrada:";
-            // 
-            // labelSimboloDivisaTOP
-            // 
-            this.labelSimboloDivisaTOP.AutoSize = true;
-            this.labelSimboloDivisaTOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSimboloDivisaTOP.Location = new System.Drawing.Point(144, 357);
-            this.labelSimboloDivisaTOP.Name = "labelSimboloDivisaTOP";
-            this.labelSimboloDivisaTOP.Size = new System.Drawing.Size(18, 20);
-            this.labelSimboloDivisaTOP.TabIndex = 16;
-            this.labelSimboloDivisaTOP.Text = "€";
-            // 
-            // labelSimboloDivisaMCR
-            // 
-            this.labelSimboloDivisaMCR.AutoSize = true;
-            this.labelSimboloDivisaMCR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSimboloDivisaMCR.Location = new System.Drawing.Point(141, 357);
-            this.labelSimboloDivisaMCR.Name = "labelSimboloDivisaMCR";
-            this.labelSimboloDivisaMCR.Size = new System.Drawing.Size(18, 20);
-            this.labelSimboloDivisaMCR.TabIndex = 23;
-            this.labelSimboloDivisaMCR.Text = "€";
-            // 
-            // precioEntradaMCR
-            // 
-            this.precioEntradaMCR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precioEntradaMCR.Location = new System.Drawing.Point(39, 355);
-            this.precioEntradaMCR.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.precioEntradaMCR.Name = "precioEntradaMCR";
-            this.precioEntradaMCR.Size = new System.Drawing.Size(100, 26);
-            this.precioEntradaMCR.TabIndex = 22;
-            this.precioEntradaMCR.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.precioEntradaMCR.ValueChanged += new System.EventHandler(this.precioEntradaMCR_ValueChanged);
-            // 
-            // labelPrecioEntradaMCR
-            // 
-            this.labelPrecioEntradaMCR.AutoSize = true;
-            this.labelPrecioEntradaMCR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrecioEntradaMCR.Location = new System.Drawing.Point(25, 334);
-            this.labelPrecioEntradaMCR.Name = "labelPrecioEntradaMCR";
-            this.labelPrecioEntradaMCR.Size = new System.Drawing.Size(134, 18);
-            this.labelPrecioEntradaMCR.TabIndex = 21;
-            this.labelPrecioEntradaMCR.Text = "Precio por entrada:";
-            // 
-            // numEntradasMCR
-            // 
-            this.numEntradasMCR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numEntradasMCR.Location = new System.Drawing.Point(39, 295);
-            this.numEntradasMCR.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numEntradasMCR.Name = "numEntradasMCR";
-            this.numEntradasMCR.Size = new System.Drawing.Size(120, 26);
-            this.numEntradasMCR.TabIndex = 20;
-            this.numEntradasMCR.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numEntradasMCR.ValueChanged += new System.EventHandler(this.numEntradasMCR_ValueChanged);
-            // 
-            // labelEntradasDisponiblesMCR
-            // 
-            this.labelEntradasDisponiblesMCR.AutoSize = true;
-            this.labelEntradasDisponiblesMCR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEntradasDisponiblesMCR.Location = new System.Drawing.Point(25, 274);
-            this.labelEntradasDisponiblesMCR.Name = "labelEntradasDisponiblesMCR";
-            this.labelEntradasDisponiblesMCR.Size = new System.Drawing.Size(149, 18);
-            this.labelEntradasDisponiblesMCR.TabIndex = 19;
-            this.labelEntradasDisponiblesMCR.Text = "Entradas disponibles:";
-            // 
-            // labelSimboloDivisaStarset
-            // 
-            this.labelSimboloDivisaStarset.AutoSize = true;
-            this.labelSimboloDivisaStarset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSimboloDivisaStarset.Location = new System.Drawing.Point(142, 357);
-            this.labelSimboloDivisaStarset.Name = "labelSimboloDivisaStarset";
-            this.labelSimboloDivisaStarset.Size = new System.Drawing.Size(18, 20);
-            this.labelSimboloDivisaStarset.TabIndex = 23;
-            this.labelSimboloDivisaStarset.Text = "€";
-            // 
-            // precioEntradaStarset
-            // 
-            this.precioEntradaStarset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precioEntradaStarset.Location = new System.Drawing.Point(40, 355);
-            this.precioEntradaStarset.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.precioEntradaStarset.Name = "precioEntradaStarset";
-            this.precioEntradaStarset.Size = new System.Drawing.Size(100, 26);
-            this.precioEntradaStarset.TabIndex = 22;
-            this.precioEntradaStarset.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.precioEntradaStarset.ValueChanged += new System.EventHandler(this.precioEntradaStarset_ValueChanged);
-            // 
-            // labelPrecioEntradaStarset
-            // 
-            this.labelPrecioEntradaStarset.AutoSize = true;
-            this.labelPrecioEntradaStarset.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrecioEntradaStarset.Location = new System.Drawing.Point(26, 334);
-            this.labelPrecioEntradaStarset.Name = "labelPrecioEntradaStarset";
-            this.labelPrecioEntradaStarset.Size = new System.Drawing.Size(134, 18);
-            this.labelPrecioEntradaStarset.TabIndex = 21;
-            this.labelPrecioEntradaStarset.Text = "Precio por entrada:";
-            // 
-            // numEntradasStarset
-            // 
-            this.numEntradasStarset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numEntradasStarset.Location = new System.Drawing.Point(40, 295);
-            this.numEntradasStarset.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numEntradasStarset.Name = "numEntradasStarset";
-            this.numEntradasStarset.Size = new System.Drawing.Size(120, 26);
-            this.numEntradasStarset.TabIndex = 20;
-            this.numEntradasStarset.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numEntradasStarset.ValueChanged += new System.EventHandler(this.numEntradasStarset_ValueChanged);
-            // 
-            // labelEntradasDisponiblesStarset
-            // 
-            this.labelEntradasDisponiblesStarset.AutoSize = true;
-            this.labelEntradasDisponiblesStarset.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEntradasDisponiblesStarset.Location = new System.Drawing.Point(26, 274);
-            this.labelEntradasDisponiblesStarset.Name = "labelEntradasDisponiblesStarset";
-            this.labelEntradasDisponiblesStarset.Size = new System.Drawing.Size(149, 18);
-            this.labelEntradasDisponiblesStarset.TabIndex = 19;
-            this.labelEntradasDisponiblesStarset.Text = "Entradas disponibles:";
-            // 
             // ListaConciertosEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -634,30 +634,31 @@
             this.Name = "ListaConciertosEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestionar conciertos";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ListaConciertosEmpleado_FormClosed);
             this.panelConciertoTwentyOnePilots.ResumeLayout(false);
             this.panelConciertoTwentyOnePilots.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.precioEntradaTOP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEntradasTOP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenGloboTOP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenCalendarioTOP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenUbicacionTOP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelConciertoMyChemicalRomance.ResumeLayout(false);
             this.panelConciertoMyChemicalRomance.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.precioEntradaMCR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEntradasMCR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenGloboMCR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenCalendarioMCR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenUbicacionMCR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelConciertoStarset.ResumeLayout(false);
             this.panelConciertoStarset.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.precioEntradaStarset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEntradasStarset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenGloboStarset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenCalendarioStarset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenUbicacionStarset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numEntradasTOP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.precioEntradaTOP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.precioEntradaMCR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numEntradasMCR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.precioEntradaStarset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numEntradasStarset)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

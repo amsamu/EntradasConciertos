@@ -289,6 +289,7 @@
             this.Name = "VentanaPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trámite de pago";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VentanaPago_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelPago.ResumeLayout(false);
             this.panelPago.PerformLayout();

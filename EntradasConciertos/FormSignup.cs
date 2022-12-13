@@ -19,9 +19,9 @@ namespace EntradasConciertos
             InitializeComponent();
         }
 
-        protected override void OnFormClosing(FormClosingEventArgs e)
+        private void VentanaSignup_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            CerrarAplicacion();
         }
 
         private void campoUsuario_TextChanged(object sender, EventArgs e)
@@ -62,16 +62,17 @@ namespace EntradasConciertos
             else
             {
                 anadirUsuario(new Usuario(campoUsuario.Text, campoClave.Text, checkEmpleado.Checked));
-                this.Hide();
                 new VentanaLogin().Show();
+                this.Close();
             }
 
         }
         
         private void botonCancelar_Click(object sender, EventArgs e)
         {
-            this.Hide();
             new VentanaLogin().Show();
+            this.Close();
         }
+
     }
 }

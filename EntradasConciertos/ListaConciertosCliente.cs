@@ -24,6 +24,11 @@ namespace EntradasConciertos
             PonerInfoConciertos();
         }
 
+        private void ListaConciertosCliente_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            CerrarAplicacion();
+        }
+
         private void PonerInfoConciertos()
         {
             labelCiudadTwentyOnePilots.Text = ((Concierto)listaConciertos[0]).ciudad;
@@ -39,33 +44,29 @@ namespace EntradasConciertos
             labelFechaStarset.Text = ((Concierto)listaConciertos[2]).fechaString;
         }
 
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void botonCerrarSesion_Click(object sender, EventArgs e)
         {
-            this.Hide();
             new VentanaLogin().Show();
+            this.Close();
         }
 
         private void masInfoTOP_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
             new DetallesConciertoTOP().Show();
+            this.Close();
         }
 
         private void masInfoMCR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
             new DetallesConciertoMCR().Show();
+            this.Close();
         }
 
         private void masInfoStarset_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
             new DetallesConciertoStarset().Show();
+            this.Close();
         }
+        
     }
 }

@@ -223,6 +223,7 @@
             this.Name = "VentanaSignup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "sssss";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VentanaSignup_FormClosed);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fondoLogin)).EndInit();

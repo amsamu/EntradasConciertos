@@ -20,9 +20,9 @@ namespace EntradasConciertos
             labelNumUsuariosReg.Text += Convert.ToString(ContarUsuarios());
         }
 
-        protected override void OnFormClosing(FormClosingEventArgs e)
+        private void VentanaLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            CerrarAplicacion();
         }
 
         private void botonEntrar_Click(object sender, EventArgs e)
@@ -40,12 +40,12 @@ namespace EntradasConciertos
 					if (u.empleado)
                     {
                         new ListaConciertosEmpleado().Show();
-                        this.Hide();
+                        this.Close();
                     }
                     else
                     {
                         new ListaConciertosCliente().Show();
-                        this.Hide();
+                        this.Close();
                     }
                 }
                 else
@@ -57,8 +57,8 @@ namespace EntradasConciertos
 
         private void botonRegistrarse_Click(object sender, EventArgs e)
         {
-            this.Hide();
             new VentanaSignup().Show();
+            this.Close();
         }
     }
 }

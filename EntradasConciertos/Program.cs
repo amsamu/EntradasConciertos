@@ -18,12 +18,22 @@ namespace EntradasConciertos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VentanaLogin());
+            new VentanaLogin().Show();
+            Application.Run();
         }
 
         static string ficheroUsuarios = "usuarios.txt";
         static string ficheroConciertos = "datos-conciertos.txt";
         public static char simboloDivisa = '€';
+
+        public static void CerrarAplicacion()
+        {
+            Console.WriteLine(Application.OpenForms.Count);
+            if (Application.OpenForms.Count == 0)
+            {
+                Application.Exit();
+            }
+        }
 
         // Método para añadir un solo usuario al fichero.
         public static void anadirUsuario(Usuario u)

@@ -232,6 +232,7 @@
             this.Name = "DetallesConciertoTOP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Concierto Twenty One Pilots";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DetallesConciertoTOP_FormClosed);
             this.panelInfoConcierto.ResumeLayout(false);
             this.panelInfoConcierto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numEntradas)).EndInit();

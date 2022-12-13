@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaLogin));
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.labelNumUsuariosReg = new System.Windows.Forms.Label();
             this.botonRegistrarse = new System.Windows.Forms.Button();
             this.labelWrongLogin = new System.Windows.Forms.Label();
             this.botonEntrar = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.labelClave = new System.Windows.Forms.Label();
             this.labelUsuario = new System.Windows.Forms.Label();
             this.fondoLogin = new System.Windows.Forms.PictureBox();
-            this.labelNumUsuariosReg = new System.Windows.Forms.Label();
             this.panelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fondoLogin)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +60,15 @@
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(335, 232);
             this.panelLogin.TabIndex = 5;
+            // 
+            // labelNumUsuariosReg
+            // 
+            this.labelNumUsuariosReg.AutoSize = true;
+            this.labelNumUsuariosReg.Location = new System.Drawing.Point(46, 200);
+            this.labelNumUsuariosReg.Name = "labelNumUsuariosReg";
+            this.labelNumUsuariosReg.Size = new System.Drawing.Size(171, 18);
+            this.labelNumUsuariosReg.TabIndex = 9;
+            this.labelNumUsuariosReg.Text = "Nº usuarios registrados: ";
             // 
             // botonRegistrarse
             // 
@@ -146,15 +155,6 @@
             this.fondoLogin.TabIndex = 0;
             this.fondoLogin.TabStop = false;
             // 
-            // labelNumUsuariosReg
-            // 
-            this.labelNumUsuariosReg.AutoSize = true;
-            this.labelNumUsuariosReg.Location = new System.Drawing.Point(46, 200);
-            this.labelNumUsuariosReg.Name = "labelNumUsuariosReg";
-            this.labelNumUsuariosReg.Size = new System.Drawing.Size(171, 18);
-            this.labelNumUsuariosReg.TabIndex = 9;
-            this.labelNumUsuariosReg.Text = "Nº usuarios registrados: ";
-            // 
             // VentanaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,6 +167,7 @@
             this.Name = "VentanaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar sesión";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VentanaLogin_FormClosed);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fondoLogin)).EndInit();

@@ -438,6 +438,7 @@
             this.Name = "ListaConciertosCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Próximos conciertos";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ListaConciertosCliente_FormClosed);
             this.panelConciertoTwentyOnePilots.ResumeLayout(false);
             this.panelConciertoTwentyOnePilots.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenGloboTOP)).EndInit();
