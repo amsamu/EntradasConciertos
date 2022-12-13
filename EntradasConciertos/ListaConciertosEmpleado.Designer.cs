@@ -631,6 +631,7 @@
             this.Controls.Add(this.panelConciertoStarset);
             this.Controls.Add(this.panelConciertoMyChemicalRomance);
             this.Controls.Add(this.panelConciertoTwentyOnePilots);
+            this.MaximizeBox = false;
             this.Name = "ListaConciertosEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestionar conciertos";

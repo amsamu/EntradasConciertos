@@ -229,6 +229,7 @@
             this.ClientSize = new System.Drawing.Size(845, 507);
             this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.panelInfoConcierto);
+            this.MaximizeBox = false;
             this.Name = "DetallesConciertoMCR";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Concierto My Chemical Romance";

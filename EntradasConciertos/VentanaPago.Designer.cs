@@ -286,6 +286,7 @@
             this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.panelPago);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "VentanaPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trámite de pago";
