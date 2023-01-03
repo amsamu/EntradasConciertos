@@ -140,7 +140,7 @@
             this.masInfoTOP.Location = new System.Drawing.Point(60, 272);
             this.masInfoTOP.Name = "masInfoTOP";
             this.masInfoTOP.Size = new System.Drawing.Size(69, 20);
-            this.masInfoTOP.TabIndex = 4;
+            this.masInfoTOP.TabIndex = 1;
             this.masInfoTOP.TabStop = true;
             this.masInfoTOP.Text = "Más info";
             this.masInfoTOP.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.masInfoTOP_LinkClicked);
@@ -248,7 +248,7 @@
             this.masInfoMCR.Location = new System.Drawing.Point(60, 270);
             this.masInfoMCR.Name = "masInfoMCR";
             this.masInfoMCR.Size = new System.Drawing.Size(69, 20);
-            this.masInfoMCR.TabIndex = 11;
+            this.masInfoMCR.TabIndex = 2;
             this.masInfoMCR.TabStop = true;
             this.masInfoMCR.Text = "Más info";
             this.masInfoMCR.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.masInfoMCR_LinkClicked);
@@ -356,7 +356,7 @@
             this.masInfoStarset.Location = new System.Drawing.Point(61, 268);
             this.masInfoStarset.Name = "masInfoStarset";
             this.masInfoStarset.Size = new System.Drawing.Size(69, 20);
-            this.masInfoStarset.TabIndex = 11;
+            this.masInfoStarset.TabIndex = 3;
             this.masInfoStarset.TabStop = true;
             this.masInfoStarset.Text = "Más info";
             this.masInfoStarset.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.masInfoStarset_LinkClicked);
@@ -419,7 +419,7 @@
             this.botonCerrarSesion.Location = new System.Drawing.Point(699, 22);
             this.botonCerrarSesion.Name = "botonCerrarSesion";
             this.botonCerrarSesion.Size = new System.Drawing.Size(120, 31);
-            this.botonCerrarSesion.TabIndex = 5;
+            this.botonCerrarSesion.TabIndex = 4;
             this.botonCerrarSesion.Text = "Cerrar sesión";
             this.botonCerrarSesion.UseVisualStyleBackColor = true;
             this.botonCerrarSesion.Click += new System.EventHandler(this.botonCerrarSesion_Click);

@@ -138,7 +138,7 @@
             0});
             this.precioEntradaTOP.Name = "precioEntradaTOP";
             this.precioEntradaTOP.Size = new System.Drawing.Size(100, 26);
-            this.precioEntradaTOP.TabIndex = 15;
+            this.precioEntradaTOP.TabIndex = 5;
             this.precioEntradaTOP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.precioEntradaTOP.ValueChanged += new System.EventHandler(this.precioEntradaTOP_ValueChanged);
             // 
@@ -163,7 +163,7 @@
             0});
             this.numEntradasTOP.Name = "numEntradasTOP";
             this.numEntradasTOP.Size = new System.Drawing.Size(120, 26);
-            this.numEntradasTOP.TabIndex = 13;
+            this.numEntradasTOP.TabIndex = 4;
             this.numEntradasTOP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numEntradasTOP.ValueChanged += new System.EventHandler(this.numEntradasTOP_ValueChanged);
             // 
@@ -234,7 +234,7 @@
             this.selecFechaTOP.Location = new System.Drawing.Point(64, 230);
             this.selecFechaTOP.Name = "selecFechaTOP";
             this.selecFechaTOP.Size = new System.Drawing.Size(107, 26);
-            this.selecFechaTOP.TabIndex = 11;
+            this.selecFechaTOP.TabIndex = 3;
             this.selecFechaTOP.ValueChanged += new System.EventHandler(this.selecFechaTOP_ValueChanged);
             // 
             // campoLugarTOP
@@ -243,7 +243,7 @@
             this.campoLugarTOP.Location = new System.Drawing.Point(55, 188);
             this.campoLugarTOP.Name = "campoLugarTOP";
             this.campoLugarTOP.Size = new System.Drawing.Size(116, 26);
-            this.campoLugarTOP.TabIndex = 10;
+            this.campoLugarTOP.TabIndex = 2;
             this.campoLugarTOP.TextChanged += new System.EventHandler(this.campoLugarTOP_TextChanged);
             // 
             // campoCiudadTOP
@@ -252,7 +252,7 @@
             this.campoCiudadTOP.Location = new System.Drawing.Point(55, 155);
             this.campoCiudadTOP.Name = "campoCiudadTOP";
             this.campoCiudadTOP.Size = new System.Drawing.Size(116, 26);
-            this.campoCiudadTOP.TabIndex = 9;
+            this.campoCiudadTOP.TabIndex = 1;
             this.campoCiudadTOP.TextChanged += new System.EventHandler(this.campoCiudadTOP_TextChanged);
             // 
             // panelConciertoMyChemicalRomance
@@ -296,7 +296,7 @@
             0});
             this.precioEntradaMCR.Name = "precioEntradaMCR";
             this.precioEntradaMCR.Size = new System.Drawing.Size(100, 26);
-            this.precioEntradaMCR.TabIndex = 22;
+            this.precioEntradaMCR.TabIndex = 10;
             this.precioEntradaMCR.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.precioEntradaMCR.ValueChanged += new System.EventHandler(this.precioEntradaMCR_ValueChanged);
             // 
@@ -321,7 +321,7 @@
             0});
             this.numEntradasMCR.Name = "numEntradasMCR";
             this.numEntradasMCR.Size = new System.Drawing.Size(120, 26);
-            this.numEntradasMCR.TabIndex = 20;
+            this.numEntradasMCR.TabIndex = 9;
             this.numEntradasMCR.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numEntradasMCR.ValueChanged += new System.EventHandler(this.numEntradasMCR_ValueChanged);
             // 
@@ -342,7 +342,7 @@
             this.selecFechaMCR.Location = new System.Drawing.Point(64, 230);
             this.selecFechaMCR.Name = "selecFechaMCR";
             this.selecFechaMCR.Size = new System.Drawing.Size(107, 26);
-            this.selecFechaMCR.TabIndex = 18;
+            this.selecFechaMCR.TabIndex = 8;
             this.selecFechaMCR.ValueChanged += new System.EventHandler(this.selecFechaMCR_ValueChanged);
             // 
             // campoLugarMCR
@@ -351,7 +351,7 @@
             this.campoLugarMCR.Location = new System.Drawing.Point(55, 188);
             this.campoLugarMCR.Name = "campoLugarMCR";
             this.campoLugarMCR.Size = new System.Drawing.Size(116, 26);
-            this.campoLugarMCR.TabIndex = 17;
+            this.campoLugarMCR.TabIndex = 7;
             this.campoLugarMCR.TextChanged += new System.EventHandler(this.campoLugarMCR_TextChanged);
             // 
             // campoCiudadMCR
@@ -360,7 +360,7 @@
             this.campoCiudadMCR.Location = new System.Drawing.Point(55, 155);
             this.campoCiudadMCR.Name = "campoCiudadMCR";
             this.campoCiudadMCR.Size = new System.Drawing.Size(116, 26);
-            this.campoCiudadMCR.TabIndex = 16;
+            this.campoCiudadMCR.TabIndex = 6;
             this.campoCiudadMCR.TextChanged += new System.EventHandler(this.campoCiudadMCR_TextChanged);
             // 
             // imagenGloboMCR
@@ -454,7 +454,7 @@
             0});
             this.precioEntradaStarset.Name = "precioEntradaStarset";
             this.precioEntradaStarset.Size = new System.Drawing.Size(100, 26);
-            this.precioEntradaStarset.TabIndex = 22;
+            this.precioEntradaStarset.TabIndex = 15;
             this.precioEntradaStarset.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.precioEntradaStarset.ValueChanged += new System.EventHandler(this.precioEntradaStarset_ValueChanged);
             // 
@@ -479,7 +479,7 @@
             0});
             this.numEntradasStarset.Name = "numEntradasStarset";
             this.numEntradasStarset.Size = new System.Drawing.Size(120, 26);
-            this.numEntradasStarset.TabIndex = 20;
+            this.numEntradasStarset.TabIndex = 14;
             this.numEntradasStarset.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numEntradasStarset.ValueChanged += new System.EventHandler(this.numEntradasStarset_ValueChanged);
             // 
@@ -500,7 +500,7 @@
             this.selecFechaStarset.Location = new System.Drawing.Point(65, 230);
             this.selecFechaStarset.Name = "selecFechaStarset";
             this.selecFechaStarset.Size = new System.Drawing.Size(107, 26);
-            this.selecFechaStarset.TabIndex = 18;
+            this.selecFechaStarset.TabIndex = 13;
             this.selecFechaStarset.ValueChanged += new System.EventHandler(this.selecFechaStarset_ValueChanged);
             // 
             // campoLugarStarset
@@ -509,7 +509,7 @@
             this.campoLugarStarset.Location = new System.Drawing.Point(56, 188);
             this.campoLugarStarset.Name = "campoLugarStarset";
             this.campoLugarStarset.Size = new System.Drawing.Size(116, 26);
-            this.campoLugarStarset.TabIndex = 17;
+            this.campoLugarStarset.TabIndex = 12;
             this.campoLugarStarset.TextChanged += new System.EventHandler(this.campoLugarStarset_TextChanged);
             // 
             // campoCiudadStarset
@@ -518,7 +518,7 @@
             this.campoCiudadStarset.Location = new System.Drawing.Point(56, 155);
             this.campoCiudadStarset.Name = "campoCiudadStarset";
             this.campoCiudadStarset.Size = new System.Drawing.Size(116, 26);
-            this.campoCiudadStarset.TabIndex = 16;
+            this.campoCiudadStarset.TabIndex = 11;
             this.campoCiudadStarset.TextChanged += new System.EventHandler(this.campoCiudadStarset_TextChanged);
             // 
             // imagenGloboStarset
@@ -589,7 +589,7 @@
             this.botonCerrarSesion.Location = new System.Drawing.Point(699, 22);
             this.botonCerrarSesion.Name = "botonCerrarSesion";
             this.botonCerrarSesion.Size = new System.Drawing.Size(120, 31);
-            this.botonCerrarSesion.TabIndex = 5;
+            this.botonCerrarSesion.TabIndex = 17;
             this.botonCerrarSesion.Text = "Cerrar sesión";
             this.botonCerrarSesion.UseVisualStyleBackColor = true;
             this.botonCerrarSesion.Click += new System.EventHandler(this.botonCerrarSesion_Click);
@@ -600,7 +600,7 @@
             this.botonGuardarCambios.Location = new System.Drawing.Point(336, 557);
             this.botonGuardarCambios.Name = "botonGuardarCambios";
             this.botonGuardarCambios.Size = new System.Drawing.Size(171, 32);
-            this.botonGuardarCambios.TabIndex = 6;
+            this.botonGuardarCambios.TabIndex = 16;
             this.botonGuardarCambios.Text = "Guardar cambios";
             this.botonGuardarCambios.UseVisualStyleBackColor = true;
             this.botonGuardarCambios.Click += new System.EventHandler(this.botonGuardarCambios_Click);

@@ -74,10 +74,10 @@
             this.panelPago.Controls.Add(this.botonConfirmarPago);
             this.panelPago.Controls.Add(this.labelEligeMetodoPago);
             this.panelPago.Controls.Add(this.labelContrasena);
-            this.panelPago.Controls.Add(this.campoNumTarjeta);
             this.panelPago.Controls.Add(this.labelNumTarjeta);
             this.panelPago.Controls.Add(this.labelFechaCaducidad);
             this.panelPago.Controls.Add(this.panelOpcionesPago);
+            this.panelPago.Controls.Add(this.campoNumTarjeta);
             this.panelPago.Controls.Add(this.campoEmail);
             this.panelPago.Location = new System.Drawing.Point(153, 20);
             this.panelPago.Name = "panelPago";
@@ -91,7 +91,7 @@
             this.campoCVV.MaxLength = 3;
             this.campoCVV.Name = "campoCVV";
             this.campoCVV.Size = new System.Drawing.Size(79, 26);
-            this.campoCVV.TabIndex = 33;
+            this.campoCVV.TabIndex = 5;
             this.campoCVV.Visible = false;
             this.campoCVV.TextChanged += new System.EventHandler(this.campoCVV_TextChanged);
             // 
@@ -102,7 +102,7 @@
             this.campoFechaCaducidad.MaxLength = 5;
             this.campoFechaCaducidad.Name = "campoFechaCaducidad";
             this.campoFechaCaducidad.Size = new System.Drawing.Size(79, 26);
-            this.campoFechaCaducidad.TabIndex = 32;
+            this.campoFechaCaducidad.TabIndex = 4;
             this.campoFechaCaducidad.Visible = false;
             this.campoFechaCaducidad.TextChanged += new System.EventHandler(this.campoFechaCaducidad_TextChanged);
             // 
@@ -125,7 +125,7 @@
             this.campoContrasena.Name = "campoContrasena";
             this.campoContrasena.PasswordChar = '●';
             this.campoContrasena.Size = new System.Drawing.Size(212, 26);
-            this.campoContrasena.TabIndex = 26;
+            this.campoContrasena.TabIndex = 4;
             this.campoContrasena.Visible = false;
             this.campoContrasena.TextChanged += new System.EventHandler(this.campoContrasena_TextChanged);
             // 
@@ -156,7 +156,7 @@
             this.botonConfirmarPago.Location = new System.Drawing.Point(179, 314);
             this.botonConfirmarPago.Name = "botonConfirmarPago";
             this.botonConfirmarPago.Size = new System.Drawing.Size(147, 36);
-            this.botonConfirmarPago.TabIndex = 11;
+            this.botonConfirmarPago.TabIndex = 6;
             this.botonConfirmarPago.Text = "Confirmar pago";
             this.botonConfirmarPago.UseVisualStyleBackColor = true;
             this.botonConfirmarPago.Click += new System.EventHandler(this.botonConfirmarPago_Click);
@@ -191,7 +191,7 @@
             this.campoNumTarjeta.MaxLength = 19;
             this.campoNumTarjeta.Name = "campoNumTarjeta";
             this.campoNumTarjeta.Size = new System.Drawing.Size(212, 26);
-            this.campoNumTarjeta.TabIndex = 31;
+            this.campoNumTarjeta.TabIndex = 3;
             this.campoNumTarjeta.Visible = false;
             this.campoNumTarjeta.TextChanged += new System.EventHandler(this.campoNumTarjeta_TextChanged);
             // 
@@ -226,7 +226,7 @@
             this.panelOpcionesPago.Location = new System.Drawing.Point(105, 58);
             this.panelOpcionesPago.Name = "panelOpcionesPago";
             this.panelOpcionesPago.Size = new System.Drawing.Size(286, 83);
-            this.panelOpcionesPago.TabIndex = 34;
+            this.panelOpcionesPago.TabIndex = 1;
             // 
             // opcionPayPal
             // 
@@ -236,7 +236,7 @@
             this.opcionPayPal.Location = new System.Drawing.Point(16, 49);
             this.opcionPayPal.Name = "opcionPayPal";
             this.opcionPayPal.Size = new System.Drawing.Size(75, 24);
-            this.opcionPayPal.TabIndex = 25;
+            this.opcionPayPal.TabIndex = 2;
             this.opcionPayPal.TabStop = true;
             this.opcionPayPal.Text = "PayPal";
             this.opcionPayPal.UseVisualStyleBackColor = true;
@@ -250,7 +250,7 @@
             this.opcionTarjeta.Location = new System.Drawing.Point(16, 14);
             this.opcionTarjeta.Name = "opcionTarjeta";
             this.opcionTarjeta.Size = new System.Drawing.Size(198, 24);
-            this.opcionTarjeta.TabIndex = 24;
+            this.opcionTarjeta.TabIndex = 1;
             this.opcionTarjeta.TabStop = true;
             this.opcionTarjeta.Text = "Tarjeta de débito/crédito";
             this.opcionTarjeta.UseVisualStyleBackColor = true;
@@ -262,7 +262,7 @@
             this.campoEmail.Location = new System.Drawing.Point(179, 176);
             this.campoEmail.Name = "campoEmail";
             this.campoEmail.Size = new System.Drawing.Size(212, 26);
-            this.campoEmail.TabIndex = 24;
+            this.campoEmail.TabIndex = 3;
             this.campoEmail.Visible = false;
             this.campoEmail.TextChanged += new System.EventHandler(this.campoEmail_TextChanged);
             // 
@@ -272,7 +272,7 @@
             this.botonVolver.Location = new System.Drawing.Point(697, 20);
             this.botonVolver.Name = "botonVolver";
             this.botonVolver.Size = new System.Drawing.Size(91, 31);
-            this.botonVolver.TabIndex = 6;
+            this.botonVolver.TabIndex = 7;
             this.botonVolver.Text = "Volver";
             this.botonVolver.UseVisualStyleBackColor = true;
             this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);

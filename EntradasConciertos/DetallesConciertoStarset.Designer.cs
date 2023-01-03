@@ -173,7 +173,7 @@
             0});
             this.numEntradas.Name = "numEntradas";
             this.numEntradas.Size = new System.Drawing.Size(61, 26);
-            this.numEntradas.TabIndex = 12;
+            this.numEntradas.TabIndex = 1;
             this.numEntradas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numEntradas.ValueChanged += new System.EventHandler(this.numEntradas_ValueChanged);
             // 
@@ -184,7 +184,7 @@
             this.botonComprar.Location = new System.Drawing.Point(145, 330);
             this.botonComprar.Name = "botonComprar";
             this.botonComprar.Size = new System.Drawing.Size(121, 36);
-            this.botonComprar.TabIndex = 11;
+            this.botonComprar.TabIndex = 2;
             this.botonComprar.Text = "Comprar";
             this.botonComprar.UseVisualStyleBackColor = true;
             this.botonComprar.Click += new System.EventHandler(this.botonComprar_Click);
@@ -216,7 +216,7 @@
             this.botonVolver.Location = new System.Drawing.Point(728, 22);
             this.botonVolver.Name = "botonVolver";
             this.botonVolver.Size = new System.Drawing.Size(91, 31);
-            this.botonVolver.TabIndex = 5;
+            this.botonVolver.TabIndex = 3;
             this.botonVolver.Text = "Volver";
             this.botonVolver.UseVisualStyleBackColor = true;
             this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
