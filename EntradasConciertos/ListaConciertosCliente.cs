@@ -29,6 +29,19 @@ namespace EntradasConciertos
             CerrarAplicacion();
         }
 
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                botonCerrarSesion.PerformClick();
+                return true;
+            }
+            else
+            {
+                return base.ProcessDialogKey(keyData);
+            }
+        }
+
         private void PonerInfoConciertos()
         {
             labelCiudadTwentyOnePilots.Text = ((Concierto)listaConciertos[0]).ciudad;

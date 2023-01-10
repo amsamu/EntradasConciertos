@@ -16,22 +16,42 @@ namespace EntradasConciertos
     {
         int indiceConcierto;
         int numEntradas;
+        int precio;
         bool emailValido = false;
         bool contrasenaValida = false;
         bool numTarjetaValido = false;
         bool fechaCaducidadValida = false;
         bool cvvValido = false;
 
-        public VentanaPago(int indiceConcierto, int numEntradas)
+        public VentanaPago(int indiceConcierto, int numEntradas, int precio)
         {
             InitializeComponent();
             this.indiceConcierto = indiceConcierto;
             this.numEntradas = numEntradas;
+            this.precio = precio;
         }
 
         private void VentanaPago_FormClosed(object sender, FormClosedEventArgs e)
         {
             CerrarAplicacion();
+        }
+
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                botonVolver.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.Enter)
+            {
+                botonConfirmarPago.PerformClick();
+                return true;
+            }
+            else
+            {
+                return base.ProcessDialogKey(keyData);
+            }
         }
 
         private void opcionTarjeta_CheckedChanged(object sender, EventArgs e)
@@ -102,7 +122,7 @@ namespace EntradasConciertos
                     {
                         mensaje += "El CVV debe ser un número de 3 cifras.";
                     }
-                    MessageBox.Show(mensaje, "Datos no válidos", MessageBoxButtons.OK);
+                    MessageBox.Show(mensaje, "Datos no válidos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -131,6 +151,25 @@ namespace EntradasConciertos
 
         private void confirmarPago()
         {
+            string mensaje = "Está a punto de adquirir " + numEntradas + " ";
+            if (numEntradas > 1)
+            {
+                mensaje += "entradas";
+            }
+            else
+            {
+                mensaje += "entrada";
+            }
+            mensaje += " por un precio de " + precio + simboloDivisa + ". ¿Desea confirmar la transacción?";
+            DialogResult dr = MessageBox.Show(mensaje, "Confirmar operación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(dr == DialogResult.Yes)
+            {
+                realizarPago();
+            }
+        }
+
+        public void realizarPago()
+        {
             // Resto el número de entradas que se acaban de comprar al número de entradas disponibles de este concierto.
             ArrayList listaConciertos = LeerConciertos();
             Concierto concierto = (Concierto)listaConciertos[indiceConcierto];
@@ -138,7 +177,8 @@ namespace EntradasConciertos
             EscribirListaConciertos(listaConciertos);
 
             // Le digo al usuario que la operación se ha completado y le devuelvo a la venta de lista de conciertos.
-            MessageBox.Show("La operación de pago se ha tramitado, pronto recibirá un email de confirmación.", "Operación confirmada", MessageBoxButtons.OK);
+            MessageBox.Show("La operación de pago se ha tramitado, pronto recibirá un email de confirmación.", "Operación confirmada",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
             new ListaConciertosCliente().Show();
             this.Close();
         }

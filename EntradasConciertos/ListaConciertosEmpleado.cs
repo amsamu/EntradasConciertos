@@ -34,7 +34,7 @@ namespace EntradasConciertos
             if (seHanRealizadoCambios && !labelCambiosGuardados.Visible)
             {
                 DialogResult confirmarCierre = MessageBox.Show("Hay cambios sin guardar." +
-                    " ¿Seguro que deseas salir?", "Cambios sin guardar", MessageBoxButtons.YesNo);
+                    " ¿Seguro que deseas salir?", "Cambios sin guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (confirmarCierre == DialogResult.Yes)
                 {
                     CerrarAplicacion();
@@ -43,6 +43,24 @@ namespace EntradasConciertos
             else
             {
                 CerrarAplicacion();
+            }
+        }
+
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                botonCerrarSesion.PerformClick();
+                return true;
+            }
+            else if(keyData == Keys.Enter)
+            {
+                botonGuardarCambios.PerformClick();
+                return true;
+            }
+            else
+            {
+                return base.ProcessDialogKey(keyData);
             }
         }
 
@@ -80,7 +98,8 @@ namespace EntradasConciertos
             if(seHanRealizadoCambios && !labelCambiosGuardados.Visible)
             {
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult confirmarCierre = MessageBox.Show("Hay cambios sin guardar. ¿Seguro que deseas cerrar sesión?", "Cambios sin guardar", buttons);
+                DialogResult confirmarCierre = MessageBox.Show("Hay cambios sin guardar. ¿Seguro que deseas cerrar sesión?", "Cambios sin guardar", buttons, 
+                    MessageBoxIcon.Warning);
                 if(confirmarCierre == DialogResult.Yes)
                 {
                     new VentanaLogin().Show();

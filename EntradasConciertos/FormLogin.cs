@@ -24,8 +24,7 @@ namespace EntradasConciertos
         {
             CerrarAplicacion();
         }
-
-        /*
+        
         protected override bool ProcessDialogKey(Keys keyData)
         {
             if (keyData == Keys.Escape)
@@ -42,7 +41,7 @@ namespace EntradasConciertos
             {
                 return base.ProcessDialogKey(keyData);
             }
-        }*/
+        }
 
         private void botonEntrar_Click(object sender, EventArgs e)
         {	

@@ -27,6 +27,24 @@ namespace EntradasConciertos
             CerrarAplicacion();
         }
 
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                botonVolver.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.Enter)
+            {
+                botonComprar.PerformClick();
+                return true;
+            }
+            else
+            {
+                return base.ProcessDialogKey(keyData);
+            }
+        }
+
         private void PonerInfoConcierto()
         {
             labelNumEntradasDisp.Text = Convert.ToString(concierto.entradasDisponibles);
@@ -43,7 +61,7 @@ namespace EntradasConciertos
 
         private void botonComprar_Click(object sender, EventArgs e)
         {
-            new VentanaPago(2, (int)numEntradas.Value).Show();
+            new VentanaPago(2, (int)numEntradas.Value, (int)(numEntradas.Value * concierto.precioEntrada)).Show();
             this.Close();
         }
 

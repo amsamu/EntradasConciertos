@@ -24,6 +24,24 @@ namespace EntradasConciertos
             CerrarAplicacion();
         }
 
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                botonCancelar.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.Enter)
+            {
+                botonConfirmar.PerformClick();
+                return true;
+            }
+            else
+            {
+                return base.ProcessDialogKey(keyData);
+            }
+        }
+
         private void campoUsuario_TextChanged(object sender, EventArgs e)
         {
 
