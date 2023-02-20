@@ -121,8 +121,8 @@
   <data name="Imagine-Dragons-1200x799" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imagine-Dragons-1200x799.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo-STARSET-invert" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo-STARSET-invert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kisspng-world-computer-icons-globe-internet-5ad9bc3b7243d7.3629179815242189394681" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-world-computer-icons-globe-internet-5ad9bc3b7243d7.3629179815242189394681.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="emotionalroadshow1414x900" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emotionalroadshow1414x900.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,8 +139,11 @@
   <data name="logo-MCR-invert" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo-MCR-invert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kisspng-world-computer-icons-globe-internet-5ad9bc3b7243d7.3629179815242189394681" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-world-computer-icons-globe-internet-5ad9bc3b7243d7.3629179815242189394681.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="locationicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\locationicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5a22a5c89d5fc3.4724282915122201046446" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5a22a5c89d5fc3.4724282915122201046446.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-computer-icons-map-location-location-icon-5abbd65cb3e283.6442954415222595487368" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-map-location-location-icon-5abbd65cb3e283.6442954415222595487368.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,11 +154,11 @@
   <data name="top-trenchera" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\top-trenchera.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="locationicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\locationicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ticketport_main" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ticketport_main.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo-TOP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo-TOP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="61489df2e8157300048d701b1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\61489df2e8157300048d701b1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,10 +169,10 @@
   <data name="61489df2e8157300048d701b" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\61489df2e8157300048d701b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="5a22a5c89d5fc3.4724282915122201046446" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5a22a5c89d5fc3.4724282915122201046446.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo-STARSET-invert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo-STARSET-invert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo-TOP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo-TOP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="help-icon-inverted" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help-icon-inverted.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

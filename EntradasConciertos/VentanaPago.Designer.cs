@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelPago = new System.Windows.Forms.Panel();
+            this.pictureHelpIcon = new System.Windows.Forms.PictureBox();
             this.campoCVV = new System.Windows.Forms.TextBox();
             this.campoFechaCaducidad = new System.Windows.Forms.TextBox();
             this.labelCVV = new System.Windows.Forms.Label();
@@ -39,32 +39,25 @@
             this.botonConfirmarPago = new System.Windows.Forms.Button();
             this.labelEligeMetodoPago = new System.Windows.Forms.Label();
             this.labelContrasena = new System.Windows.Forms.Label();
-            this.campoNumTarjeta = new System.Windows.Forms.TextBox();
             this.labelNumTarjeta = new System.Windows.Forms.Label();
             this.labelFechaCaducidad = new System.Windows.Forms.Label();
             this.panelOpcionesPago = new System.Windows.Forms.Panel();
             this.opcionPayPal = new System.Windows.Forms.RadioButton();
             this.opcionTarjeta = new System.Windows.Forms.RadioButton();
+            this.campoNumTarjeta = new System.Windows.Forms.TextBox();
             this.campoEmail = new System.Windows.Forms.TextBox();
             this.botonVolver = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.backgroundPicture = new System.Windows.Forms.PictureBox();
             this.panelPago.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHelpIcon)).BeginInit();
             this.panelOpcionesPago.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backgroundPicture)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::EntradasConciertos.Properties.Resources.Imagine_Dragons_1200x799;
-            this.pictureBox1.Location = new System.Drawing.Point(-59, -103);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(966, 630);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panelPago
             // 
             this.panelPago.BackColor = System.Drawing.Color.Black;
+            this.panelPago.Controls.Add(this.pictureHelpIcon);
             this.panelPago.Controls.Add(this.campoCVV);
             this.panelPago.Controls.Add(this.campoFechaCaducidad);
             this.panelPago.Controls.Add(this.labelCVV);
@@ -83,6 +76,18 @@
             this.panelPago.Name = "panelPago";
             this.panelPago.Size = new System.Drawing.Size(516, 382);
             this.panelPago.TabIndex = 2;
+            // 
+            // pictureHelpIcon
+            // 
+            this.pictureHelpIcon.Image = global::EntradasConciertos.Properties.Resources.help_icon_inverted;
+            this.pictureHelpIcon.Location = new System.Drawing.Point(264, 223);
+            this.pictureHelpIcon.Name = "pictureHelpIcon";
+            this.pictureHelpIcon.Size = new System.Drawing.Size(35, 26);
+            this.pictureHelpIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureHelpIcon.TabIndex = 31;
+            this.pictureHelpIcon.TabStop = false;
+            this.pictureHelpIcon.Visible = false;
+            this.pictureHelpIcon.Click += new System.EventHandler(this.pictureHelpIcon_Click);
             // 
             // campoCVV
             // 
@@ -184,17 +189,6 @@
             this.labelContrasena.Text = "Contraseña";
             this.labelContrasena.Visible = false;
             // 
-            // campoNumTarjeta
-            // 
-            this.campoNumTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoNumTarjeta.Location = new System.Drawing.Point(179, 176);
-            this.campoNumTarjeta.MaxLength = 19;
-            this.campoNumTarjeta.Name = "campoNumTarjeta";
-            this.campoNumTarjeta.Size = new System.Drawing.Size(212, 26);
-            this.campoNumTarjeta.TabIndex = 3;
-            this.campoNumTarjeta.Visible = false;
-            this.campoNumTarjeta.TextChanged += new System.EventHandler(this.campoNumTarjeta_TextChanged);
-            // 
             // labelNumTarjeta
             // 
             this.labelNumTarjeta.AutoSize = true;
@@ -256,6 +250,17 @@
             this.opcionTarjeta.UseVisualStyleBackColor = true;
             this.opcionTarjeta.CheckedChanged += new System.EventHandler(this.opcionTarjeta_CheckedChanged);
             // 
+            // campoNumTarjeta
+            // 
+            this.campoNumTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoNumTarjeta.Location = new System.Drawing.Point(179, 176);
+            this.campoNumTarjeta.MaxLength = 19;
+            this.campoNumTarjeta.Name = "campoNumTarjeta";
+            this.campoNumTarjeta.Size = new System.Drawing.Size(212, 26);
+            this.campoNumTarjeta.TabIndex = 3;
+            this.campoNumTarjeta.Visible = false;
+            this.campoNumTarjeta.TextChanged += new System.EventHandler(this.campoNumTarjeta_TextChanged);
+            // 
             // campoEmail
             // 
             this.campoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -277,6 +282,16 @@
             this.botonVolver.UseVisualStyleBackColor = true;
             this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
             // 
+            // backgroundPicture
+            // 
+            this.backgroundPicture.Image = global::EntradasConciertos.Properties.Resources.Imagine_Dragons_1200x799;
+            this.backgroundPicture.Location = new System.Drawing.Point(-59, -103);
+            this.backgroundPicture.Name = "backgroundPicture";
+            this.backgroundPicture.Size = new System.Drawing.Size(966, 630);
+            this.backgroundPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.backgroundPicture.TabIndex = 0;
+            this.backgroundPicture.TabStop = false;
+            // 
             // VentanaPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,24 +300,25 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.panelPago);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.backgroundPicture);
             this.MaximizeBox = false;
             this.Name = "VentanaPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trámite de pago";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VentanaPago_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelPago.ResumeLayout(false);
             this.panelPago.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHelpIcon)).EndInit();
             this.panelOpcionesPago.ResumeLayout(false);
             this.panelOpcionesPago.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backgroundPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox backgroundPicture;
         private System.Windows.Forms.Panel panelPago;
         private System.Windows.Forms.Label labelSeparador;
         private System.Windows.Forms.Button botonConfirmarPago;
@@ -321,5 +337,6 @@
         private System.Windows.Forms.RadioButton opcionPayPal;
         private System.Windows.Forms.RadioButton opcionTarjeta;
         private System.Windows.Forms.Button botonVolver;
+        private System.Windows.Forms.PictureBox pictureHelpIcon;
     }
 }

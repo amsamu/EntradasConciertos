@@ -80,6 +80,7 @@ namespace EntradasConciertos
                 campoNumTarjeta.Visible = true;
                 campoFechaCaducidad.Visible = true;
                 campoCVV.Visible = true;
+                pictureHelpIcon.Visible = true;
             }
             else if(opcionPayPal.Checked)
             {
@@ -89,6 +90,7 @@ namespace EntradasConciertos
                 campoNumTarjeta.Visible = false;
                 campoFechaCaducidad.Visible = false;
                 campoCVV.Visible = false;
+                pictureHelpIcon.Visible = false;
 
                 labelEmail.Visible = true;
                 labelContrasena.Visible = true;
@@ -116,7 +118,7 @@ namespace EntradasConciertos
                     }
                     if (!fechaCaducidadValida)
                     {
-                        mensaje += "La fecha de caducidad debe tener el formato MM/AA.\n";
+                        mensaje += "La fecha de caducidad debe ser una fecha válida con el formato MM/AA.\n";
                     }
                     if (!cvvValido)
                     {
@@ -245,7 +247,8 @@ namespace EntradasConciertos
         private void campoFechaCaducidad_TextChanged(object sender, EventArgs e)
         {
             string[] partesFecha = campoFechaCaducidad.Text.Split('/');
-            if(partesFecha.Length == 2 && partesFecha[0].Length == 2 && partesFecha[1].Length == 2)
+            int anyoActual = DateTime.UtcNow.Date.Year;
+            if (partesFecha.Length == 2 && partesFecha[0].Length == 2 && partesFecha[1].Length == 2 && int.Parse(partesFecha[0]) <= 12 && int.Parse(partesFecha[1]) >= anyoActual)
             {
                 fechaCaducidadValida = true;
             }
@@ -284,5 +287,9 @@ namespace EntradasConciertos
             this.Close();
         }
 
+        private void pictureHelpIcon_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Introduce la fecha de caducidad de la tarjeta con formato MM/AA.\nEjemplo: 11/24 (noviembre de 2024).", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
