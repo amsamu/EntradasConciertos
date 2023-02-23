@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace EntradasConciertos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            AppDomain.CurrentDomain.SetData("DataDirectory", AppDomain.CurrentDomain.BaseDirectory);
             new VentanaLogin().Show();
             Application.Run();
         }
@@ -25,6 +27,8 @@ namespace EntradasConciertos
         static string ficheroUsuarios = "usuarios.txt";
         static string ficheroConciertos = "datos-conciertos.txt";
         public static char simboloDivisa = '€';
+
+        static DatabaseDataSetTableAdapters.UsuariosTableAdapter usuariosAdapter = new DatabaseDataSetTableAdapters.UsuariosTableAdapter();
 
         public static void CerrarAplicacion()
         {
@@ -38,35 +42,25 @@ namespace EntradasConciertos
         // Método para añadir un solo usuario al fichero.
         public static void anadirUsuario(Usuario u)
         {
-            using (StreamWriter writetext = new StreamWriter(ficheroUsuarios, true))
-            {
-               writetext.WriteLine(u.username + ";" + u.clave + ";" + u.empleado);
-            }
+            usuariosAdapter.Insert(u.username, u.clave, u.esEmpleado);
         }
 		
         // Método para buscar un usuario por el nombre, si no existe devuelve null.
 		public static Usuario EncontrarUsuario(string nombre)
         {
+            DatabaseDataSet.UsuariosDataTable tablaUsuarios =  usuariosAdapter.GetData();
             Usuario resultado = null;
-			if (File.Exists(ficheroUsuarios))
+            int i = 0;
+            while(i < tablaUsuarios.Count && resultado == null)
             {
-				using(StreamReader sr = new StreamReader(ficheroUsuarios))
-				{
-					string linea = sr.ReadLine();
-					while(linea!=null && resultado == null)
-					{
-						string[] partesLinea = linea.Split(';');
-						if (partesLinea[0] == nombre)
-						{
-							resultado = new Usuario(partesLinea[0], partesLinea[1], Convert.ToBoolean(partesLinea[2]));
-						}
-						linea = sr.ReadLine();
-					}
-				}
-			}
-            else
-            {
-                File.Create(ficheroUsuarios);
+                if (tablaUsuarios[i][0].ToString().Trim() == nombre)
+                {
+                    resultado = new Usuario(tablaUsuarios[i][0].ToString().Trim(), tablaUsuarios[i][1].ToString().Trim(), Convert.ToBoolean(tablaUsuarios[i][2].ToString().Trim()));
+                }
+                else
+                {
+                    i++;
+                }
             }
             return resultado;
         }
@@ -85,21 +79,8 @@ namespace EntradasConciertos
         // Método que recorre el fichero de usuarios y cuenta el número total.
 		public static int ContarUsuarios()
         {
-            int contador = 0;
-            if (!File.Exists(ficheroUsuarios))
-            {
-                File.Create(ficheroUsuarios);
-            }
-            using (StreamReader sr = new StreamReader(ficheroUsuarios))
-            {
-                string linea = sr.ReadLine();
-                while (linea != null)
-                {
-                    contador++;
-                    linea = sr.ReadLine();
-                }
-            }
-            return contador;
+            DatabaseDataSet.UsuariosDataTable tablaUsuarios = usuariosAdapter.GetData();
+            return tablaUsuarios.Count;
         }
 
         // Método que lee el fichero de usuarios y los carga en un ArrayList.

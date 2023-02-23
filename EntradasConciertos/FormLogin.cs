@@ -55,7 +55,7 @@ namespace EntradasConciertos
                 if (campoClave.Text == u.clave)
                 {
                     labelWrongLogin.Visible = false;
-					if (u.empleado)
+					if (u.esEmpleado)
                     {
                         new ListaConciertosEmpleado().Show();
                         this.Close();

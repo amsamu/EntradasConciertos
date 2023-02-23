@@ -10,13 +10,13 @@ namespace EntradasConciertos
     {
         public string username { get; set; }
         public string clave { get; set; }
-        public bool empleado { get; set; }
+        public bool esEmpleado { get; set; }
 
         public Usuario(string usuario, string clave, bool empleado)
         {
             this.username = usuario;
             this.clave = clave;
-            this.empleado = empleado;
+            this.esEmpleado = empleado;
         }
     }
 }
