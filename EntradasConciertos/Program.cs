@@ -24,7 +24,6 @@ namespace EntradasConciertos
             Application.Run();
         }
 
-        static string ficheroUsuarios = "usuarios.txt";
         static string ficheroConciertos = "datos-conciertos.txt";
         public static char simboloDivisa = '€';
 
